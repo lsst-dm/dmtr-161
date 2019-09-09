@@ -123,9 +123,9 @@ The following personnel are involved in this test activity:
   \item LVV-C85 owner: 
     Gregory Dubois-Felsmann
   \begin{itemize}
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437} tester: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436} tester: 
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334} tester: 
+    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436} tester: 
+    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437} tester: 
   \end{itemize}
 \end{itemize}
 \item Additional Test Personnel involved:
@@ -152,13 +152,13 @@ The following personnel are involved in this test activity:
 
   {\bf \footnotesize test case} & {\bf \footnotesize status} & {\bf \footnotesize comment} & {\bf \footnotesize issues} \\\toprule
 
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
     & Not Executed &  &
     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
     & Not Executed &  &
     \\\hline
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
     & Not Executed &  &
     \\\hline
 
@@ -202,17 +202,30 @@ Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/
   \subsubsection{Test Cases in LVV-C85 Test Cycle}
 
 
-    \paragraph{Test Case LVV-T1437 - LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
+    \paragraph{Test Case LVV-T1334 - LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone
  }\mbox{}\\
 
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{\textit{ LVV-T1437 } }
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{\textit{ LVV-T1334 } }
 test case in Jira.
 
-    This test case verifies that the TAP service in the API Aspect of the
-Science Platform is accessible to authorized users through a login
-process, and that TAP searches can be performed using the IVOA TAP
-protocol from remote sites.
+    This test case verifies that the Portal Aspect of the Science Platform
+is accessible to authorized users through a login process, and that TAP
+searches can be performed from the Portal Aspect UI.\\[2\baselineskip]In
+so doing and in conjunction with the other LDM-503-10a test cases
+collected under LVV-P48, it addresses all or part of the following
+requirements:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0002, DMS-LSP-REQ-0005, DMS-LSP-REQ-0006,
+  DMS-LSP-REQ-0020, DMS-LSP-REQ-0022, DMS-LSP-REQ-0023, DMS-LSP-REQ-0024
+\item
+  DMS-PRTL-REQ-0001, DMS-PRTL-REQ-0015, DMS-PRTL-REQ-0016,
+  DMS-PRTL-REQ-0017, DMS-PRTL-REQ-0020, DMS-PRTL-REQ-0023,
+  DMS-PRTL-REQ-0026, DMS-PRTL-REQ-0049, primarily
+\end{itemize}
 
 
     \textbf{ Preconditions}:\\
@@ -231,10 +244,9 @@ protocol from remote sites.
       1 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      On the local computer, clone the TBD test notebook for LDM-503-10a into
-the user environment from the TBD tag of the TBD Github repository.
-~Note the SHA that applies to the version of the test notebook that has
-been cloned.
+      Navigate to the \url{https://lsst-lsp-stable.ncsa.illinois.edu/}
+endpoint of the LSP at the LDF. ~From the displayed page, navigate to
+the Portal Aspect.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -244,7 +256,8 @@ been cloned.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      A login screen should be displayed.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -262,9 +275,9 @@ been cloned.
       2 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Launch a LOCAL instance of JupyterLab (i.e., by running ``jupyter lab'')
-on the computer to be used for testing. ~Ensure that the test notebook
-is visible from within JupyterLab.
+      Log in to the Portal Aspect with NCSA credentials. ~Verify that a Portal
+TAP search screen comes up. ~Note the user name displayed in the upper
+left of the Portal. ~Log out.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -274,7 +287,11 @@ is visible from within JupyterLab.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      Following login, the Portal Aspect TAP search screen should be
+displayed, or a clearly visible UI element allowing one-click access to
+that screen. ~A user name corresponding to the credentials entered
+should be displayed.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -292,9 +309,8 @@ is visible from within JupyterLab.
       3 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Obtain an access token for the TAP service from the LSP instance under
-test, by navigating to the XXX endpoint in a web browser and logging in.
-~NCSA credentials for the tester should be used.
+      Log in to the Portal Aspect with alternate credentials that are
+associated with the same identity. ~
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -304,7 +320,10 @@ test, by navigating to the XXX endpoint in a web browser and logging in.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The Portal application should come up just as in the previous step; the
+user name displayed in the upper left of the Portal should be the same
+as in the previous step.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -322,9 +341,8 @@ test, by navigating to the XXX endpoint in a web browser and logging in.
       4 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Open the test notebook and paste the access token into the appropriate
-cell in the notebook. ~The text ``LVV-T1437'' should be found in the
-notebook just before the appropriate line of code.
+      Navigate to the TAP search screen, if necessary, and ensure that the
+LSST TAP service associated with the chosen LSP instance is selected.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -334,7 +352,13 @@ notebook just before the appropriate line of code.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      A TAP search screen should either already be displayed after the
+previous step, or should be displayed after a one-click action from the
+Portal's initial page. ~On the TAP screen, a UI element allowing the
+choice of TAP service to user should be available, and an LSST TAP
+service associated with the LSP instance under test should be
+pre-selected as the default.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -352,7 +376,8 @@ notebook just before the appropriate line of code.
       5 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Execute the entire notebook.
+      Verify that the same WISE and SDSS catalog tables that were explored in
+DMTR-52 are now visible in the TAP service.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -362,7 +387,11 @@ notebook just before the appropriate line of code.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The SDSS Stripe 82 2013 processing's deep detection and forced
+photometry catalogs, and the WISE mission's principal catalog, forced
+photometry catalog, and single-epoch source catalog should be
+accessible.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -380,8 +409,9 @@ notebook just before the appropriate line of code.
       6 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Note the success and/or failure indications that appear in the output of
-the notebook.
+      Perform a TAP search on the AllWISE source catalog around the equatorial
+coordinates (2, 0) (degrees), with a 30 arcminute radius, using the
+Portal UI to specify the query.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -391,64 +421,10 @@ the notebook.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+      This query should return about 12,000 rows of data. ~It should be
+displayed in a table, as an overlay on a context image, and as a
+configurable 2D density plot.
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      7 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Delete the access token from the test notebook.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      8 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Save and close the test notebook. ~Save the fully-executed notebook in
-TBD location as a record of the test.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -982,30 +958,17 @@ quit the Web browser in use.
     \end{longtable}
 
 
-    \paragraph{Test Case LVV-T1334 - LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
+    \paragraph{Test Case LVV-T1437 - LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone
  }\mbox{}\\
 
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{\textit{ LVV-T1334 } }
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{\textit{ LVV-T1437 } }
 test case in Jira.
 
-    This test case verifies that the Portal Aspect of the Science Platform
-is accessible to authorized users through a login process, and that TAP
-searches can be performed from the Portal Aspect UI.\\[2\baselineskip]In
-so doing and in conjunction with the other LDM-503-10a test cases
-collected under LVV-P48, it addresses all or part of the following
-requirements:
-
-\begin{itemize}
-\tightlist
-\item
-  DMS-LSP-REQ-0002, DMS-LSP-REQ-0005, DMS-LSP-REQ-0006,
-  DMS-LSP-REQ-0020, DMS-LSP-REQ-0022, DMS-LSP-REQ-0023, DMS-LSP-REQ-0024
-\item
-  DMS-PRTL-REQ-0001, DMS-PRTL-REQ-0015, DMS-PRTL-REQ-0016,
-  DMS-PRTL-REQ-0017, DMS-PRTL-REQ-0020, DMS-PRTL-REQ-0023,
-  DMS-PRTL-REQ-0026, DMS-PRTL-REQ-0049, primarily
-\end{itemize}
+    This test case verifies that the TAP service in the API Aspect of the
+Science Platform is accessible to authorized users through a login
+process, and that TAP searches can be performed using the IVOA TAP
+protocol from remote sites.
 
 
     \textbf{ Preconditions}:\\
@@ -1024,9 +987,10 @@ requirements:
       1 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Navigate to the \url{https://lsst-lsp-stable.ncsa.illinois.edu/}
-endpoint of the LSP at the LDF. ~From the displayed page, navigate to
-the Portal Aspect.
+      On the local computer, clone the TBD test notebook for LDM-503-10a into
+the user environment from the TBD tag of the TBD Github repository.
+~Note the SHA that applies to the version of the test notebook that has
+been cloned.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1036,8 +1000,7 @@ the Portal Aspect.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      A login screen should be displayed.
-
+      
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -1055,9 +1018,9 @@ the Portal Aspect.
       2 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Log in to the Portal Aspect with NCSA credentials. ~Verify that a Portal
-TAP search screen comes up. ~Note the user name displayed in the upper
-left of the Portal. ~Log out.
+      Launch a LOCAL instance of JupyterLab (i.e., by running ``jupyter lab'')
+on the computer to be used for testing. ~Ensure that the test notebook
+is visible from within JupyterLab.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1067,11 +1030,7 @@ left of the Portal. ~Log out.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Following login, the Portal Aspect TAP search screen should be
-displayed, or a clearly visible UI element allowing one-click access to
-that screen. ~A user name corresponding to the credentials entered
-should be displayed.
-
+      
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -1089,8 +1048,9 @@ should be displayed.
       3 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Log in to the Portal Aspect with alternate credentials that are
-associated with the same identity. ~
+      Obtain an access token for the TAP service from the LSP instance under
+test, by navigating to the XXX endpoint in a web browser and logging in.
+~NCSA credentials for the tester should be used.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1100,10 +1060,7 @@ associated with the same identity. ~
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      The Portal application should come up just as in the previous step; the
-user name displayed in the upper left of the Portal should be the same
-as in the previous step.
-
+      
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -1121,8 +1078,9 @@ as in the previous step.
       4 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Navigate to the TAP search screen, if necessary, and ensure that the
-LSST TAP service associated with the chosen LSP instance is selected.
+      Open the test notebook and paste the access token into the appropriate
+cell in the notebook. ~The text ``LVV-T1437'' should be found in the
+notebook just before the appropriate line of code.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1132,13 +1090,7 @@ LSST TAP service associated with the chosen LSP instance is selected.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      A TAP search screen should either already be displayed after the
-previous step, or should be displayed after a one-click action from the
-Portal's initial page. ~On the TAP screen, a UI element allowing the
-choice of TAP service to user should be available, and an LSST TAP
-service associated with the LSP instance under test should be
-pre-selected as the default.
-
+      
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -1156,8 +1108,7 @@ pre-selected as the default.
       5 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Verify that the same WISE and SDSS catalog tables that were explored in
-DMTR-52 are now visible in the TAP service.
+      Execute the entire notebook.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1167,11 +1118,7 @@ DMTR-52 are now visible in the TAP service.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      The SDSS Stripe 82 2013 processing's deep detection and forced
-photometry catalogs, and the WISE mission's principal catalog, forced
-photometry catalog, and single-epoch source catalog should be
-accessible.
-
+      
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -1189,9 +1136,8 @@ accessible.
       6 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Perform a TAP search on the AllWISE source catalog around the equatorial
-coordinates (2, 0) (degrees), with a 30 arcminute radius, using the
-Portal UI to specify the query.
+      Note the success and/or failure indications that appear in the output of
+the notebook.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1201,10 +1147,64 @@ Portal UI to specify the query.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      This query should return about 12,000 rows of data. ~It should be
-displayed in a table, as an overlay on a context image, and as a
-configurable 2D density plot.
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
 
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      7 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Delete the access token from the test notebook.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      8 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Save and close the test notebook. ~Save the fully-executed notebook in
+TBD location as a record of the test.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
