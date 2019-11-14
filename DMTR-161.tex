@@ -123,6 +123,7 @@ The following personnel are involved in this test activity:
   \item LVV-C85 owner: 
     Gregory Dubois-Felsmann
   \begin{itemize}
+    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622} tester: 
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334} tester: 
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436} tester: 
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437} tester: 
@@ -130,6 +131,7 @@ The following personnel are involved in this test activity:
 \end{itemize}
 \item Additional Test Personnel involved:
   \begin{itemize}
+    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}: 
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}: 
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}: 
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}: 
@@ -152,6 +154,9 @@ The following personnel are involved in this test activity:
 
   {\bf \footnotesize test case} & {\bf \footnotesize status} & {\bf \footnotesize comment} & {\bf \footnotesize issues} \\\toprule
 
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
+    & Not Executed &  &
+    \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
     & Not Executed &  &
     \\\hline
@@ -202,6 +207,413 @@ Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/
   \subsubsection{Test Cases in LVV-C85 Test Cycle}
 
 
+    \paragraph{Test Case LVV-T622 - Verify LSP only available to authenticated users
+ }\mbox{}\\
+
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{\textit{ LVV-T622 } }
+test case in Jira.
+
+    Verify that the functions and services of all three aspects of the LSP
+are accessible only to authenticated users.
+
+
+    \textbf{ Preconditions}:\\
+    
+
+    Execution status: {\bf Not Executed }
+
+    Final comment:\\
+
+
+    Detailed step results:
+
+    \begin{longtable}{p{1cm}p{2cm}p{13cm}}
+    \hline
+    {Step} & \multicolumn{2}{c}{Description, Results and Status}\\ \hline
+      1 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Attempt to navigate to the Portal Aspect of the LSP instance under test.
+~Verify that credentials are requested and that a Portal interface is
+not displayed.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      No direct access to Portal; credential request screen displayed.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      2 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Enter the (presumably invalid) credentials user=foo, password=xyzzy, and
+verify that access to the Portal Aspect interface is not granted.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      No access to Portal Aspect; credential request screen displayed again.
+~Record any error message that is shown.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      3 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Enter a set of valid credentials, and verify that access to the Portal
+interface is granted.\\[2\baselineskip]This test does not involve any
+exploration of the Portal behavior at this point.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Access to some version of the Portal interface is granted. ~(The exact
+nature of that interface will be evolving in the course of LSST
+construction and system integration.)
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      4 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Log out from the Portal.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      A logout or LSP landing page is displayed.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      5 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Attempt to navigate to the Notebook Aspect of the LSP instance under
+test. ~Verify that credentials are requested and that no other Notebook
+Aspect functionality is exposed.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      No direct access to the Notebook Aspect; credential request screen
+displayed.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      6 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Enter the (presumably invalid) credentials user=foo, password=xyzzy, and
+verify that access to the Notebook Aspect interface is not granted.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      No access to Notebook Aspect; credential request screen displayed again.
+~Record any error message that is shown.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      7 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Enter a set of valid credentials, and verify that access to the Notebook
+Aspect interface is granted.\\[2\baselineskip]This test does not involve
+any exploration of the Notebook Aspect behavior at this point.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      An initial page of the JupyterHub system is displayed. ~Note briefly
+what is seen, but no further testing is required.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      8 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Log out of the Notebook Aspect.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      9 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      From a Unix prompt on a system with network access to the TAP service in
+the LSP instance under test, verify using the ``curl'' command below
+that an attempt to access the TAP service without credentials is
+rejected.~
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      10 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      From a Unix prompt on a system with network access to the TAP service in
+the LSP instance under test, verify using the ``curl'' command below
+that an attempt to access the TAP service with invalid credentials is
+rejected.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      11 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Using a web browser, navigate to the token-access endpoint
+(/auth/tokens) of the LSP instance under test. ~Authenticate with valid
+LSST credentials. ~Obtain a token for the ``read:tap'' capability.
+~Leave the resulting web page displayed. ~It is not necessary to expose
+the full token text.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      A token is granted.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      12 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      From a Unix prompt on a system with network access to the TAP service in
+the LSP instance under test, and a ``bash''-style shell, verify using
+the ``export'' and ``curl'' commands below that an attempt to access the
+TAP service with the token from the previous step is
+successful.\\[2\baselineskip]Use the ``copy to clipboard'' function from
+the token-access page from the previous step to paste the token into the
+(blind) prompt that results from the first ``export''
+command.\\[2\baselineskip]Ensure that the token is deleted from the test
+environment after the ``curl'' command is complete, and that the token
+is invalidated via the token-access web interface.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      The ``curl'' command should return HTTP status code 200 and a VOTable
+containing a list of schemas in the TAP service should be obtained.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+    \end{longtable}
+
+
     \paragraph{Test Case LVV-T1334 - LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone
  }\mbox{}\\
@@ -223,9 +635,13 @@ requirements:
   DMS-LSP-REQ-0020, DMS-LSP-REQ-0022, DMS-LSP-REQ-0023, DMS-LSP-REQ-0024
 \item
   DMS-PRTL-REQ-0001, DMS-PRTL-REQ-0015, DMS-PRTL-REQ-0016,
-  DMS-PRTL-REQ-0017, DMS-PRTL-REQ-0020, DMS-PRTL-REQ-0023,
-  DMS-PRTL-REQ-0026, DMS-PRTL-REQ-0049, primarily
+  DMS-PRTL-REQ-0017, DMS-PRTL-REQ-0020, DMS-PRTL-REQ-0026,
+  DMS-PRTL-REQ-0049, and DMS-PRTL-REQ-0095, primarily
 \end{itemize}
+
+Note this test was not designed to perform a full verification of the
+above requirements, but rather to demonstrate having reached a certain
+level of partial capability during construction.
 
 
     \textbf{ Preconditions}:\\
@@ -583,7 +999,24 @@ test case in Jira.
 
     This test case verifies that the Notebook Aspect of the Science Platform
 is accessible to authorized users through a login process, and that TAP
-searches can be performed from Python code in the Notebook Aspect.
+searches can be performed from Python code in the Notebook
+Aspect.\\[2\baselineskip]In so doing and in conjunction with the other
+LDM-503-10a test cases collected under LVV-P48, it addresses all or part
+of the following requirements:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0003, DMS-LSP-REQ-0005, DMS-LSP-REQ-0006,
+  DMS-LSP-REQ-0020, DMS-LSP-REQ-0022, DMS-LSP-REQ-0023, DMS-LSP-REQ-0024
+\item
+  DMS-NB-REQ-0001, DMS-NB-REQ-0002, DMS-NB-REQ-0005, DMS-NB-REQ-0006,
+  DMS-NB-REQ-0013, DMS-NB-REQ-0017, and DMS-NB-REQ-0029, primarily
+\end{itemize}
+
+Note this test was not designed to perform a full verification of the
+above requirements, but rather to demonstrate having reached a certain
+level of partial capability during construction.
 
 
     \textbf{ Preconditions}:\\
@@ -1132,7 +1565,24 @@ test case in Jira.
     This test case verifies that the TAP service in the API Aspect of the
 Science Platform is accessible to authorized users through a login
 process, and that TAP searches can be performed using the IVOA TAP
-protocol from remote sites.
+protocol from remote sites.\\[2\baselineskip]In so doing and in
+conjunction with the other LDM-503-10a test cases collected under
+LVV-P48, it addresses all or part of the following requirements:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0004, DMS-LSP-REQ-0005, DMS-LSP-REQ-0006,
+  DMS-LSP-REQ-0020, DMS-LSP-REQ-0022, DMS-LSP-REQ-0023, DMS-LSP-REQ-0024
+\item
+  DMS-API-REQ-0003, DMS-API-REQ-0004, DMS-API-REQ-0006,
+  DMS-API-REQ-0007, DMS-API-REQ-0008, DMS-API-REQ-0009,
+  DMS-API-REQ-0023, and DMS-API-REQ-0039, primarily
+\end{itemize}
+
+Note this test was not designed to perform a full verification of the
+above requirements, but rather to demonstrate having reached a certain
+level of partial capability during construction.
 
 
     \textbf{ Preconditions}:\\
