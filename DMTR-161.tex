@@ -363,12 +363,45 @@ this page in order to transfer your token to a prompt in another window.
 the LSP instance under test, and a ``bash''-style shell, verify using
 the ``export'' and ``curl'' commands below that an attempt to access the
 TAP service with the token from the previous step is
-successful.\\[2\baselineskip]Use the ``copy to clipboard'' function from
-the token-access page from the previous step to paste the token into the
-(blind) prompt that results from the ``read''
+successful.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu''
+in the ``curl'' command with the appropriate root URL for the LSP
+instance under test.\\[2\baselineskip]Use the ``copy to clipboard''
+function from the token-access page from the previous step to paste the
+token into the (blind) prompt that results from the ``read''
 command.\\[2\baselineskip]Ensure that the token is deleted from the test
 environment after the ``curl'' command is complete, and that the token
 is invalidated via the token-access web interface.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      6 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Verify by inspection that the file resulting from the ``curl'' command
+above has the general form of a VOTable. ~(A separate test case will
+verify the VOTable format itself.)\\[2\baselineskip]Save this file as
+part of the test records using LSST standard procedures.~
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -703,7 +736,9 @@ rejected.~
       From a Unix prompt on a system with network access to the TAP service in
 the LSP instance under test, verify using the ``curl'' command below
 that an attempt to access the TAP service with invalid credentials is
-rejected.
+rejected.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu'' in
+the ``curl'' command with the appropriate root URL for the LSP instance
+under test.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -768,9 +803,11 @@ the full token text.
 the LSP instance under test, and a ``bash''-style shell, verify using
 the ``export'' and ``curl'' commands below that an attempt to access the
 TAP service with the token from the previous step is
-successful.\\[2\baselineskip]Use the ``copy to clipboard'' function from
-the token-access page from the previous step to paste the token into the
-(blind) prompt that results from the first ``export''
+successful.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu''
+in the ``curl'' command with the appropriate root URL for the LSP
+instance under test.\\[2\baselineskip]Use the ``copy to clipboard''
+function from the token-access page from the previous step to paste the
+token into the (blind) prompt that results from the first ``export''
 command.\\[2\baselineskip]Ensure that the token is deleted from the test
 environment after the ``curl'' command is complete, and that the token
 is invalidated via the token-access web interface.
@@ -784,7 +821,8 @@ is invalidated via the token-access web interface.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       The ``curl'' command should return HTTP status code 200 and a VOTable
-containing a list of schemas in the TAP service should be obtained.
+containing a list of tables in the TAP service should be
+obtained.\\[2\baselineskip]Retain the VOTable file in the test records.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1017,8 +1055,12 @@ accessible.
       Perform a TAP search on the AllWISE source catalog around the equatorial
 coordinates (2, 0) (degrees), with a 30 arcminute radius, using the
 Portal UI to specify the query (select the ``Single Table'' radio
-button). ~When the query completes, note the total number of rows in the
-table, as displayed in the table header, and record it.
+button). ~\\
+To find the AllWISE source catalog, select the ``wise\_00'' schema from
+the schema menu, and then the ``wise\_00.allwise\_p3as\_psd'' table from
+the table menu.\\
+When the query completes, note the total number of rows in the table, as
+displayed in the table header, and record it.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1161,7 +1203,8 @@ in a previous step.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The ADQL code matches that from Step 8.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
@@ -1567,7 +1610,9 @@ has been cloned.
       12 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Open the test notebook and execute all of its steps.\\[2\baselineskip]
+      Open the test notebook and insert the URL saved from the execution of
+LVV-T1334, Step 9 into the input cell that reads\\
+``portal\_job\_url = ''''.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1595,8 +1640,9 @@ has been cloned.
       13 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Note the success and/or failure indications that appear in the output of
-the notebook.
+      Record the success and/or failure indications that appear in the final
+output cell of the notebook.\\
+If the notebook execution produced an exception, record that.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1741,6 +1787,34 @@ notebook session.
 
       & Status          & Not Executed \\ \hline
 
+      18 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Execute the entire notebook.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
     \end{longtable}
 
 
@@ -1825,8 +1899,8 @@ of the test notebook that has been cloned.
       \begin{minipage}[t]{13cm}{\footnotesize
       Launch a LOCAL instance of JupyterLab (i.e., by running ``jupyter lab'')
 on the computer to be used for testing. ~Ensure that the test notebook
-is visible from within JupyterLab. ~This test case must NOT be run in
-the Notebook Aspect.
+is visible from within JupyterLab. ~\textbf{NB: as a reminder, this test
+case must NOT be run in the Notebook Aspect.}
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1857,7 +1931,9 @@ the Notebook Aspect.
       Obtain an access token for the TAP service from the LSP instance under
 test, by navigating to the
 https://lsst-lsp-stable.ncsa.illinois.edu/auth/tokens endpoint in a web
-browser and logging in. ~NCSA credentials for the tester should be used.
+browser and logging in. ~NCSA credentials for the tester should be
+used.\\
+Copy the access token to the clipboard.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1885,10 +1961,11 @@ browser and logging in. ~NCSA credentials for the tester should be used.
       4 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Open the test notebook and paste the access token into the appropriate
-cell in the notebook. ~The text ``LVV-T1437 access token'', followed by
-instructions, should be found in the notebook just before the
-appropriate line of code.
+      Within the Posix shell session from which JupyterLab is to be launched,
+set the environment variable ``ACCESS\_TOKEN'' to the value of the token
+obtained in the previous step. To do this without exposing the token
+unnecessarily, it is suggested to use the ``read -s'' command, pasting
+the token in at the no-echo prompt this command produces.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1944,8 +2021,9 @@ appropriate line of code.
       6 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Record the success and/or failure indications that appear in the output
-of the notebook.
+      Record the success and/or failure indications that appear in the final
+output cell of the notebook.\\
+If the notebook execution produced an exception, record that.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1971,34 +2049,6 @@ of the notebook.
       & Status          & Not Executed \\ \hline
 
       7 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Delete the access token from the test notebook.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      8 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Save and close the test notebook. ~Save the fully-executed notebook in
@@ -2027,12 +2077,72 @@ TBD location as a record of the test.
 
       & Status          & Not Executed \\ \hline
 
-      9 & Description &
+      8 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Copy the file ``LVV-T1334-output.csv'' that was saved in the output
 repository for the LVV-T1334 test case into the home directory of the
 JupyterLab session.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      9 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      On the local computer, execute the command ``pip install pyvo
+jupyterlabutils'' in the local environment. ~(It is suggested to do this
+in a venv or conda environment.)
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      10 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Open the test notebook and insert the URL saved from the execution of
+LVV-T1334, Step 9 into the input cell that reads\\
+``portal\_job\_url = ''''.
 
       \vspace{\dp0}
       } \end{minipage} \\
