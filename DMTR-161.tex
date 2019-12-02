@@ -169,7 +169,7 @@ pre-arranged VPN-free access to the relevant NCSA network.
  &
     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
-    & In Progress & Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
+    & Pass w/ Deviation & Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
 internal network with VPN-free access to the LSP clusters at NCSA.
  &
     \\\hline
@@ -957,7 +957,7 @@ level of partial capability during construction.
     \textbf{ Preconditions}:\\
     
 
-    Execution status: {\bf In Progress }
+    Execution status: {\bf Pass w/ Deviation }
 
     Final comment:\\Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
 internal network with VPN-free access to the LSP clusters at NCSA.
@@ -992,13 +992,16 @@ the Portal Aspect.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      Test performed on
+https://lsst-lsp-int.ncsa.illinois.edu/\\[2\baselineskip]Login screen
+displayed as expected.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       2 & Description &
 
@@ -1026,13 +1029,25 @@ should be displayed.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      TAP search screen displayed upon login. ~Username ``Gregory
+Dubois-Felsmann'' displayed.\\[2\baselineskip]Logging out resulted in
+the ``Sign in with OpenID Connect'' button being displayed. ~See
+DM-22350 for an issue regarding that result.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
+        & Issues        &
+        \begin{minipage}[t]{13cm}{\footnotesize
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~``Logout'' buttons in Portal and Notebook Aspects: non-user-friendly
+result, and apparently incomplete logout
 
-      & Status          & Not Executed \\ \hline
+        \vspace{\dp0}
+        } \end{minipage} \\
+        \\ \cdashline{2-3}
+
+      & Status          & Pass \\ \hline
 
       3 & Description &
 
@@ -1058,13 +1073,19 @@ as in the previous step.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      Because of the logout issues in DM-22350, before carrying out this step
+I cleared my browser history to ensure no carryover of old
+credentials/tokens/authorization headers.\\[2\baselineskip]Logging in
+with Caltech credentials that had been associated with my NCSA account
+via identity.lsst.org, I reached the same Portal screen with ``Gregory
+Dubois-Felsmann'' displayed.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       4 & Description &
 
@@ -1093,13 +1114,15 @@ pre-selected as the default.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The lsst-lsp-int.ncsa.illinois.edu/api/tap service was, correctly,
+selected by default.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       5 & Description &
 
@@ -1126,13 +1149,37 @@ accessible.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The SDSS ``RunDeepSource'' (deep detection) and ``RunDeepForcedSource''
+(forced photometry) tables are available, under the
+``sdss\_stripe82\_01'' schema (along with a number of additional tables
+from the original deployment).\\[2\baselineskip]The WISE
+``allwise\_p3as\_psd'' (deep detection) and ``allwise\_p3as\_mep''
+(forced photometry) tables are available, under the ``wise\_00'' schema
+(along with a number of additional tables from the original deployment).
+The three single-epoch source photometry tables do not seem to be
+visible.\\[2\baselineskip]While this is not formally a deviation from
+the test plan as written, these tables are all missing explanatory text
+in the TAP\_SCHEMA metadata used by the Portal TAP interface, so there
+is no user-friendly way to determine the meaning of the tables available
+to query.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
+        & Issues        &
+        \begin{minipage}[t]{13cm}{\footnotesize
+          \href{https://jira.lsstcorp.org/browse/DM-22421}{DM-22421}~~Investigate why the WISE single-epoch photometry tables are not visible
+in the lsst-lsp-int TAP service
 
-      & Status          & Not Executed \\ \hline
+          \href{https://jira.lsstcorp.org/browse/DM-22422}{DM-22422}~~Provide metadata for the SDSS and WISE schema and table data in
+TAP\_SCHEMA
+
+        \vspace{\dp0}
+        } \end{minipage} \\
+        \\ \cdashline{2-3}
+
+      & Status          & Pass w/ Deviation \\ \hline
 
       6 & Description &
 
@@ -1165,13 +1212,22 @@ configurable 2D density plot.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      A table of 12,717 rows was retrieved. ~The data were displayed as a
+table of 128 100-row pages (that default page size is configurable, and
+can be changed on the fly by the user). ~They were also displayed as an
+overlay on a 2MASS color HiPS image, and as an x-y density plot, with
+the axes (ra,decl) selected by default, but easily changed in the
+UI.\\[2\baselineskip]The test runner issued the query requesting the
+following columns (which should have been called out in the test
+specification): ra, decl, cntr, source\_id, coadd\_id, w1mpro, w2mpro,
+w3mpro, w4mpro.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       7 & Description &
 
@@ -1200,13 +1256,20 @@ match the number of rows in the table header in the UI.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      \% wc LVV-T1334-output.csv\\
+12718 12718 1567903 LVV-T1334-output.csv\\
+\% head -2 LVV-T1334-output.csv\\
+cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro\\
+15100001351031627,0015p000\_ac51,-0.07016340,1.54437160,0015p000\_ac51-031627,16.36700000,15.81700000,12.21100000,8.40600000\\[2\baselineskip]12,718
+rows in the file is the expectation from Step 6: 12,717 plus one header
+row.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       8 & Description &
 
@@ -1233,13 +1296,18 @@ search, using the CONTAINS() and CIRCLE() functions.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The button is labeled ``LSST TAP'', not ``TAP
+Searches''.\\[2\baselineskip]The ADQL text is:\\
+SELECT cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro
+FROM wise\_00.allwise\_p3as\_psd WHERE CONTAINS(POINT('ICRS', ra,
+decl),CIRCLE('ICRS', 2, 0, 0.5))=1
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       9 & Description &
 
@@ -1263,13 +1331,14 @@ job URL for the query and paste the URL into the test record.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      https://lsst-lsp-int.ncsa.illinois.edu/api/tap/async/eatzseuepds92ous
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       10 & Description &
 
@@ -1296,13 +1365,19 @@ in a previous step.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      Pass:\\
+\textless{}uws:parameter id=``QUERY''\textgreater{}\\
+SELECT cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro
+FROM wise\_00.allwise\_p3as\_psd WHERE CONTAINS(POINT('ICRS', ra,
+decl),CIRCLE('ICRS', 2, 0, 0.5))=1\\
+\textless{}/uws:parameter\textgreater{}
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
     \end{longtable}
 
