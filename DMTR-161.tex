@@ -123,9 +123,9 @@ The following personnel are involved in this test activity:
   \item LVV-C85 owner: 
     Gregory Dubois-Felsmann
   \begin{itemize}
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807} tester: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622} tester: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334} tester: 
+    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807} tester: Gregory Dubois-Felsmann
+    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622} tester: Gregory Dubois-Felsmann
+    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334} tester: Gregory Dubois-Felsmann
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436} tester: 
     \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437} tester: 
   \end{itemize}
@@ -157,13 +157,21 @@ The following personnel are involved in this test activity:
   {\bf \footnotesize test case} & {\bf \footnotesize status} & {\bf \footnotesize comment} & {\bf \footnotesize issues} \\\toprule
 
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}
-    & Not Executed &  &
+    & Pass & Test executed against lsst-lsp-int. ~No problems were encountered.\\
+Test executed from an OS X 10.11 iMac on the IPAC internal network, with
+pre-arranged VPN-free access to the relevant NCSA network.
+ &
     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
-    & Not Executed &  &
+    & Pass w/ Deviation & Test executed against lsst-lsp-int. ~\\
+Test executed from an OS X 10.11 iMac on the IPAC internal network, with
+pre-arranged VPN-free access to the relevant NCSA network.
+ &
     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
-    & Not Executed &  &
+    & In Progress & Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
+internal network with VPN-free access to the LSP clusters at NCSA.
+ &
     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
     & Not Executed &  &
@@ -198,7 +206,7 @@ Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/
 
   LDM-503-10a: LSP with Authentication and TAP
 \\
-  Status: Not Executed
+  Status: In Progress
 
   Execute the test cases associated with the DM milestone LDM-503-10a.
 
@@ -225,9 +233,12 @@ described by the IVOA TAP 1.1 specification. ~ ~
     \textbf{ Preconditions}:\\
     
 
-    Execution status: {\bf Not Executed }
+    Execution status: {\bf Pass }
 
-    Final comment:\\
+    Final comment:\\Test executed against lsst-lsp-int. ~No problems were encountered.\\
+Test executed from an OS X 10.11 iMac on the IPAC internal network, with
+pre-arranged VPN-free access to the relevant NCSA network.
+
 
 
     Detailed step results:
@@ -258,13 +269,14 @@ already logged in in another window or tab of the browser.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The general CILogon login screen appeared.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       2 & Description &
 
@@ -288,13 +300,15 @@ non-NCSA credentials.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      NCSA credentials were used, with a Duo push. ~Successful; reached
+``Personal access tokens'' screen.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       3 & Description &
 
@@ -317,13 +331,15 @@ non-NCSA credentials.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      ``Generate new token'' selected. ~``read:tap'' selected.\\
+A token oauth2\_proxy-a77\ldots{}6b9b generated, expiring in 24 hours.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       4 & Description &
 
@@ -348,13 +364,14 @@ this page in order to transfer your token to a prompt in another window.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      (n/a)
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       5 & Description &
 
@@ -387,13 +404,17 @@ is invalidated via the token-access web interface.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The ``curl'' command returned HTTP status code 200, in a total time
+1.081s, returning 8391 bytes with Content-Type
+``application/x-votable+xml''. ~The file tap-tables.xml was created and
+is attached to this execution.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       6 & Description &
 
@@ -418,13 +439,15 @@ part of the test records using LSST standard procedures.~
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The tap-tables.xml file does appear to the eye to be a reasonably
+conformant VOTable 1.3 file with a TABLEDATA payload.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
     \end{longtable}
 
@@ -442,9 +465,12 @@ are accessible only to authenticated users.
     \textbf{ Preconditions}:\\
     
 
-    Execution status: {\bf Not Executed }
+    Execution status: {\bf Pass w/ Deviation }
 
-    Final comment:\\
+    Final comment:\\Test executed against lsst-lsp-int. ~\\
+Test executed from an OS X 10.11 iMac on the IPAC internal network, with
+pre-arranged VPN-free access to the relevant NCSA network.
+
 
 
     Detailed step results:
@@ -475,13 +501,17 @@ not displayed.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      Confirmed; CILogon with an LSST facade was reached.\\
+"\href{https://lsst-lsp-int.ncsa.illinois.edu/}{LSST LSP Integration
+(Domain Ingress Client)} requests access to the following information.
+If you do not approve this request, do not proceed."
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       2 & Description &
 
@@ -506,13 +536,25 @@ verify that access to the Portal Aspect interface is not granted.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The message ``The username you entered cannot be identified.'' was
+displayed in a colored box on the CILogon login screen. ~This is worth
+further investigation, to see whether this allows external actors to
+deduce valid userids.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
+        & Issues        &
+        \begin{minipage}[t]{13cm}{\footnotesize
+          \href{https://jira.lsstcorp.org/browse/DM-22338}{DM-22338}~~CILogon can be used to check whether an NCSA username is valid; is this
+OK?
 
-      & Status          & Not Executed \\ \hline
+        \vspace{\dp0}
+        } \end{minipage} \\
+        \\ \cdashline{2-3}
+
+      & Status          & Pass \\ \hline
 
       3 & Description &
 
@@ -539,13 +581,15 @@ construction and system integration.)
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The ``TAP Searches'' screen of the Portal application appeared by
+default.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       4 & Description &
 
@@ -568,13 +612,30 @@ construction and system integration.)
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      A screen with just a ``Sign in with OpenID Connect'' button (and a
+footer reading "Secured with
+\href{https://github.com/pusher/oauth2_proxy\#oauth2_proxy}{OAuth2
+Proxy} version v3.2.0-151-g151ec7b") appeared.\\[2\baselineskip]This is
+not entirely acceptable in the long run. ~The user should never lose
+sight of a screen that confirms that they are still in an LSST
+environment. ~It is also not clear to what authentication domain one
+would be signing in, or what screen one would reach if signing in were
+successful.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
+        & Issues        &
+        \begin{minipage}[t]{13cm}{\footnotesize
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~``Logout'' buttons in Portal and Notebook Aspects: non-user-friendly
+result, and apparently incomplete logout
 
-      & Status          & Not Executed \\ \hline
+        \vspace{\dp0}
+        } \end{minipage} \\
+        \\ \cdashline{2-3}
+
+      & Status          & Initial Pass \\ \hline
 
       5 & Description &
 
@@ -600,13 +661,17 @@ displayed.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      Manual navigation back to the main instance landing page was required.
+~No link to do this was available from the screen displayed in Step 4.\\
+Once at the landing page, clicking on the ``Notebook Aspect'' link
+produced a fresh CILogon login screen.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       6 & Description &
 
@@ -631,13 +696,21 @@ verify that access to the Notebook Aspect interface is not granted.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      After pressing the ``Log On'' button on the initial CILogon screen, it
+became clear that I had not in fact been fully logged out. ~No
+username/password screen was displayed at all, and I ended up on the
+``Start My Server'' page of JupyterHub, with my userid displayed and a
+``Logout'' button. ~Clicking that ``Logout'' button was no more
+successful at actually logging me out than the Portal equivalent
+was.\\[2\baselineskip]Conditional pass because the security
+vulnerability here only seriously affects shared-browser situations.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass w/ Deviation \\ \hline
 
       7 & Description &
 
@@ -663,13 +736,15 @@ what is seen, but no further testing is required.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      This step also could not be executed, as it proved impossible to get the
+system into a state in which credentials were requested.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass w/ Deviation \\ \hline
 
       8 & Description &
 
@@ -691,13 +766,14 @@ what is seen, but no further testing is required.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      This had the same result as in Step 4.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Initial Pass \\ \hline
 
       9 & Description &
 
@@ -722,13 +798,15 @@ rejected.~
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      (Step 9 appears to have been an incomplete duplicate of Step 10.
+~Skipped.)
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       10 & Description &
 
@@ -755,13 +833,15 @@ under test.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      HTTP status code 401 (Authorization Required) was received. ~The HTML
+code attached as ``tap-noauth.html'' was returned.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       11 & Description &
 
@@ -788,13 +868,15 @@ the full token text.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      Token ID oauth2\_proxy-c077\ldots{}00f8 was received, with a 24 hour
+lifetime.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
       12 & Description &
 
@@ -830,13 +912,14 @@ obtained.\\[2\baselineskip]Retain the VOTable file in the test records.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      
+      The test was successful.
+
       \vspace{\dp0}
       } \end{minipage} \\
       \\ \cdashline{2-3}
 
 
-      & Status          & Not Executed \\ \hline
+      & Status          & Pass \\ \hline
 
     \end{longtable}
 
@@ -874,9 +957,11 @@ level of partial capability during construction.
     \textbf{ Preconditions}:\\
     
 
-    Execution status: {\bf Not Executed }
+    Execution status: {\bf In Progress }
 
-    Final comment:\\
+    Final comment:\\Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
+internal network with VPN-free access to the LSP clusters at NCSA.
+
 
 
     Detailed step results:
