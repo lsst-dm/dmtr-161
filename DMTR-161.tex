@@ -42,18 +42,23 @@ This is the test plan and report for LDM-503-10a: (LSP with Authentication and T
 
 Verify the integration of federated authentication and authorization
 into the LSST science platform, and the availability of an IVOA TAP
-service.\\[2\baselineskip]\textbf{Milestone
-Description}\\[2\baselineskip]This test demonstrates the successful
-integration of a single-sign-on federated authentication system, and a
-basic authorization system, with the three Aspects of the LSST Science
-Platform (Portal, Notebook, and API), with the API Aspect containing at
-least a TAP service. ~It will be demonstrated on a Kubernetes cluster
-provided by NCSA. ~It is not required for authorization to be applied at
-the database level; it is sufficient for this milestone for it to apply
-only at the TAP level. ~Data served will remain that from the original
-PDAC work, i.e., SDSS Stripe 82 and/or WISE.\\[2\baselineskip]
+service.\\
+~\\
+\textbf{Milestone Description}\\
+~\\
+This test demonstrates the successful integration of a single-sign-on
+federated authentication system, and a basic authorization system, with
+the three Aspects of the LSST Science Platform (Portal, Notebook, and
+API), with the API Aspect containing at least a TAP service. ~It will be
+demonstrated on a Kubernetes cluster provided by NCSA. ~It is not
+required for authorization to be applied at the database level; it is
+sufficient for this milestone for it to apply only at the TAP level.
+~Data served will remain that from the original PDAC work, i.e., SDSS
+Stripe 82 and/or WISE.\\
+~\\
 
-\subsection{Scope}\label{scope}
+\hypertarget{scope}{%
+\subsection{Scope}\label{scope}}
 
 The overall strategy for testing and verification within LSST Data
 Management is described in \citeds{LDM-503}.\\
@@ -104,7 +109,7 @@ The current status of test plan LVV-P48 in Jira is \textbf{ Approved }.
 
 \subsection{Verification Environment}
 \label{sect:hwconf}
-  The ``lsst-lsp-stable'' instance of the LSP, hosted at the LDF.
+  The "lsst-lsp-stable" instance of the LSP, hosted at the LDF.
 
 
 
@@ -114,31 +119,34 @@ The current status of test plan LVV-P48 in Jira is \textbf{ Approved }.
 \section{Personnel}
 \label{sect:personnel}
 
-The following personnel are involved in this test activity:
+The personnel involved in the test campaign is shown in the following table.
 
-\begin{itemize}
-\item Test Plan (LVV-P48) owner: Gregory Dubois-Felsmann
-\item Test Cycles:
-\begin{itemize}
-  \item LVV-C85 owner: 
+\begin{longtable}{p{3cm}p{3cm}p{3cm}p{6cm}}
+\hline
+\multicolumn{2}{r}{Test Plan (LVV-P48) owner:} &
+\multicolumn{2}{l}{\textbf{ Gregory Dubois-Felsmann } }\\\hline
+\multicolumn{2}{r}{ LVV-C85 owner:} &
+\multicolumn{2}{l}{\textbf{
     Gregory Dubois-Felsmann
-  \begin{itemize}
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807} tester: Gregory Dubois-Felsmann
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622} tester: Gregory Dubois-Felsmann
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334} tester: Gregory Dubois-Felsmann
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436} tester: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437} tester: 
-  \end{itemize}
-\end{itemize}
-\item Additional Test Personnel involved:
-  \begin{itemize}
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}: 
-  \end{itemize}
-\end{itemize}
+}
+} \\\hline
+\textbf{Test Case} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}
+& {\small Jeffrey Carlin } & {\small Gregory Dubois-Felsmann } &
+{\small  } \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
+& {\small Jeffrey Carlin } & {\small Gregory Dubois-Felsmann } &
+{\small  } \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
+& {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
+{\small  } \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
+& {\small Gregory Dubois-Felsmann } & {\small  } &
+{\small  } \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
+& {\small Gregory Dubois-Felsmann } & {\small  } &
+{\small  } \\ \hline
+\end{longtable}
 
 \newpage
 
@@ -157,28 +165,53 @@ The following personnel are involved in this test activity:
   {\bf \footnotesize test case} & {\bf \footnotesize status} & {\bf \footnotesize comment} & {\bf \footnotesize issues} \\\toprule
 
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}
-    & Pass & Test executed against lsst-lsp-int. ~No problems were encountered.
+    & Pass &
+    \begin{minipage}[]{0.56\textwidth}
+    \smallskip
+    Test executed against lsst-lsp-int. ~No problems were encountered.\\
 Test executed from an OS X 10.11 iMac on the IPAC internal network, with
 pre-arranged VPN-free access to the relevant NCSA network.
- &
-    \\\hline
+
+    \medskip
+    \end{minipage}
+    &     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
-    & Pass w/ Deviation & Test executed against lsst-lsp-int. ~
+    & Pass w/ Deviation &
+    \begin{minipage}[]{0.56\textwidth}
+    \smallskip
+    Test executed against lsst-lsp-int. ~\\
 Test executed from an OS X 10.11 iMac on the IPAC internal network, with
 pre-arranged VPN-free access to the relevant NCSA network.
- &
-    \\\hline
+
+    \medskip
+    \end{minipage}
+    &     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
-    & Pass w/ Deviation & Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
+    & Pass w/ Deviation &
+    \begin{minipage}[]{0.56\textwidth}
+    \smallskip
+    Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
 internal network with VPN-free access to the LSP clusters at NCSA.
- &
-    \\\hline
+
+    \medskip
+    \end{minipage}
+    &     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
-    & Not Executed &  &
-    \\\hline
+    & Not Executed &
+    \begin{minipage}[]{0.56\textwidth}
+    \smallskip
+    
+    \medskip
+    \end{minipage}
+    &     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
-    & Not Executed &  &
-    \\\hline
+    & Not Executed &
+    \begin{minipage}[]{0.56\textwidth}
+    \smallskip
+    
+    \medskip
+    \end{minipage}
+    &     \\\hline
 
 \caption{Test Results Summary}
 \label{table:summary}
@@ -250,7 +283,7 @@ pre-arranged VPN-free access to the relevant NCSA network.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Using a Web browser, navigate to the\\
-``/auth/tokens'' endpoint of the LSP instance under test.
+"/auth/tokens" endpoint of the LSP instance under test.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -301,7 +334,7 @@ non-NCSA credentials.
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
       NCSA credentials were used, with a Duo push. ~Successful; reached
-``Personal access tokens'' screen.
+"Personal access tokens" screen.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -313,7 +346,7 @@ non-NCSA credentials.
       3 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Request a token for the ``read:tap'' capability.
+      Request a token for the "read:tap" capability.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -331,8 +364,8 @@ non-NCSA credentials.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      ``Generate new token'' selected. ~``read:tap'' selected.\\
-A token oauth2\_proxy-a77\ldots{}6b9b generated, expiring in 24 hours.
+      "Generate new token" selected. ~"read:tap" selected.\\
+A token oauth2\_proxy-a77...6b9b generated, expiring in 24 hours.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -345,9 +378,11 @@ A token oauth2\_proxy-a77\ldots{}6b9b generated, expiring in 24 hours.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Leave the resulting page's browser tab/window open for use in subsequent
-test steps.\\[2\baselineskip]In many cases you may be asked in a
-subsequent step to use the ``copy token to clipboard'' UI element on
-this page in order to transfer your token to a prompt in another window.
+test steps.\\
+~\\
+In many cases you may be asked in a subsequent step to use the "copy
+token to clipboard" UI element on this page in order to transfer your
+token to a prompt in another window.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -377,17 +412,20 @@ this page in order to transfer your token to a prompt in another window.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       From a Unix prompt on a system with network access to the TAP service in
-the LSP instance under test, and a ``bash''-style shell, verify using
-the ``export'' and ``curl'' commands below that an attempt to access the
-TAP service with the token from the previous step is
-successful.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu''
-in the ``curl'' command with the appropriate root URL for the LSP
-instance under test.\\[2\baselineskip]Use the ``copy to clipboard''
-function from the token-access page from the previous step to paste the
-token into the (blind) prompt that results from the ``read''
-command.\\[2\baselineskip]Ensure that the token is deleted from the test
-environment after the ``curl'' command is complete, and that the token
-is invalidated via the token-access web interface.
+the LSP instance under test, and a "bash"-style shell, verify using the
+"export" and "curl" commands below that an attempt to access the TAP
+service with the token from the previous step is successful.\\
+~\\
+Replace "lsst-lsp-int.ncsa.illinois.edu" in the "curl" command with the
+appropriate root URL for the LSP instance under test.\\
+~\\
+Use the "copy to clipboard" function from the token-access page from the
+previous step to paste the token into the (blind) prompt that results
+from the "read" command.\\
+~\\
+Ensure that the token is deleted from the test environment after the
+"curl" command is complete, and that the token is invalidated via the
+token-access web interface.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -404,10 +442,10 @@ is invalidated via the token-access web interface.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      The ``curl'' command returned HTTP status code 200, in a total time
+      The "curl" command returned HTTP status code 200, in a total time
 1.081s, returning 8391 bytes with Content-Type
-``application/x-votable+xml''. ~The file tap-tables.xml was created and
-is attached to this execution.
+"application/x-votable+xml". ~The file tap-tables.xml was created and is
+attached to this execution.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -419,10 +457,12 @@ is attached to this execution.
       6 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Verify by inspection that the file resulting from the ``curl'' command
+      Verify by inspection that the file resulting from the "curl" command
 above has the general form of a VOTable. ~(A separate test case will
-verify the VOTable format itself.)\\[2\baselineskip]Save this file as
-part of the test records using LSST standard procedures.~
+verify the VOTable format itself.)\\
+~\\
+Save this file as part of the test records using LSST standard
+procedures.~
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -536,7 +576,7 @@ verify that access to the Portal Aspect interface is not granted.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      The message ``The username you entered cannot be identified.'' was
+      The message "The username you entered cannot be identified." was
 displayed in a colored box on the CILogon login screen. ~This is worth
 further investigation, to see whether this allows external actors to
 deduce valid userids.
@@ -560,8 +600,10 @@ OK?
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Enter a set of valid credentials, and verify that access to the Portal
-interface is granted.\\[2\baselineskip]This test does not involve any
-exploration of the Portal behavior at this point.
+interface is granted.\\
+~\\
+This test does not involve any exploration of the Portal behavior at
+this point.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -581,8 +623,7 @@ construction and system integration.)
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      The ``TAP Searches'' screen of the Portal application appeared by
-default.
+      The "TAP Searches" screen of the Portal application appeared by default.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -612,12 +653,13 @@ default.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      A screen with just a ``Sign in with OpenID Connect'' button (and a
-footer reading "Secured with
+      A screen with just a "Sign in with OpenID Connect" button (and a footer
+reading "Secured with
 \href{https://github.com/pusher/oauth2_proxy\#oauth2_proxy}{OAuth2
-Proxy} version v3.2.0-151-g151ec7b") appeared.\\[2\baselineskip]This is
-not entirely acceptable in the long run. ~The user should never lose
-sight of a screen that confirms that they are still in an LSST
+Proxy} version v3.2.0-151-g151ec7b") appeared.\\
+~\\
+This is not entirely acceptable in the long run. ~The user should never
+lose sight of a screen that confirms that they are still in an LSST
 environment. ~It is also not clear to what authentication domain one
 would be signing in, or what screen one would reach if signing in were
 successful.
@@ -628,7 +670,7 @@ successful.
 
         & Issues        &
         \begin{minipage}[t]{13cm}{\footnotesize
-          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~``Logout'' buttons in Portal and Notebook Aspects: non-user-friendly
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~"Logout" buttons in Portal and Notebook Aspects: non-user-friendly
 result, and apparently incomplete logout
 
         \vspace{\dp0}
@@ -663,7 +705,7 @@ displayed.
       \begin{minipage}[t]{13cm}{\footnotesize
       Manual navigation back to the main instance landing page was required.
 ~No link to do this was available from the screen displayed in Step 4.\\
-Once at the landing page, clicking on the ``Notebook Aspect'' link
+Once at the landing page, clicking on the "Notebook Aspect" link
 produced a fresh CILogon login screen.
 
       \vspace{\dp0}
@@ -696,14 +738,15 @@ verify that access to the Notebook Aspect interface is not granted.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      After pressing the ``Log On'' button on the initial CILogon screen, it
+      After pressing the "Log On" button on the initial CILogon screen, it
 became clear that I had not in fact been fully logged out. ~No
 username/password screen was displayed at all, and I ended up on the
-``Start My Server'' page of JupyterHub, with my userid displayed and a
-``Logout'' button. ~Clicking that ``Logout'' button was no more
-successful at actually logging me out than the Portal equivalent
-was.\\[2\baselineskip]Conditional pass because the security
-vulnerability here only seriously affects shared-browser situations.
+"Start My Server" page of JupyterHub, with my userid displayed and a
+"Logout" button. ~Clicking that "Logout" button was no more successful
+at actually logging me out than the Portal equivalent was.\\
+~\\
+Conditional pass because the security vulnerability here only seriously
+affects shared-browser situations.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -716,8 +759,10 @@ vulnerability here only seriously affects shared-browser situations.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Enter a set of valid credentials, and verify that access to the Notebook
-Aspect interface is granted.\\[2\baselineskip]This test does not involve
-any exploration of the Notebook Aspect behavior at this point.
+Aspect interface is granted.\\
+~\\
+This test does not involve any exploration of the Notebook Aspect
+behavior at this point.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -779,9 +824,8 @@ system into a state in which credentials were requested.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       From a Unix prompt on a system with network access to the TAP service in
-the LSP instance under test, verify using the ``curl'' command below
-that an attempt to access the TAP service without credentials is
-rejected.~
+the LSP instance under test, verify using the "curl" command below that
+an attempt to access the TAP service without credentials is rejected.~
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -812,11 +856,12 @@ rejected.~
 
       \begin{minipage}[t]{13cm}{\footnotesize
       From a Unix prompt on a system with network access to the TAP service in
-the LSP instance under test, verify using the ``curl'' command below
-that an attempt to access the TAP service with invalid credentials is
-rejected.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu'' in
-the ``curl'' command with the appropriate root URL for the LSP instance
-under test.
+the LSP instance under test, verify using the "curl" command below that
+an attempt to access the TAP service with invalid credentials is
+rejected.\\
+~\\
+Replace "lsst-lsp-int.ncsa.illinois.edu" in the "curl" command with the
+appropriate root URL for the LSP instance under test.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -834,7 +879,7 @@ under test.
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
       HTTP status code 401 (Authorization Required) was received. ~The HTML
-code attached as ``tap-noauth.html'' was returned.
+code attached as "tap-noauth.html" was returned.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -848,9 +893,9 @@ code attached as ``tap-noauth.html'' was returned.
       \begin{minipage}[t]{13cm}{\footnotesize
       Using a web browser, navigate to the token-access endpoint
 (/auth/tokens) of the LSP instance under test. ~Authenticate with valid
-LSST credentials. ~Obtain a token for the ``read:tap'' capability.
-~Leave the resulting web page displayed. ~It is not necessary to expose
-the full token text.
+LSST credentials. ~Obtain a token for the "read:tap" capability. ~Leave
+the resulting web page displayed. ~It is not necessary to expose the
+full token text.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -868,7 +913,7 @@ the full token text.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Token ID oauth2\_proxy-c077\ldots{}00f8 was received, with a 24 hour
+      Token ID oauth2\_proxy-c077...00f8 was received, with a 24 hour
 lifetime.
 
       \vspace{\dp0}
@@ -882,17 +927,20 @@ lifetime.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       From a Unix prompt on a system with network access to the TAP service in
-the LSP instance under test, and a ``bash''-style shell, verify using
-the ``export'' and ``curl'' commands below that an attempt to access the
-TAP service with the token from the previous step is
-successful.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu''
-in the ``curl'' command with the appropriate root URL for the LSP
-instance under test.\\[2\baselineskip]Use the ``copy to clipboard''
-function from the token-access page from the previous step to paste the
-token into the (blind) prompt that results from the first ``export''
-command.\\[2\baselineskip]Ensure that the token is deleted from the test
-environment after the ``curl'' command is complete, and that the token
-is invalidated via the token-access web interface.
+the LSP instance under test, and a "bash"-style shell, verify using the
+"export" and "curl" commands below that an attempt to access the TAP
+service with the token from the previous step is successful.\\
+~\\
+Replace "lsst-lsp-int.ncsa.illinois.edu" in the "curl" command with the
+appropriate root URL for the LSP instance under test.\\
+~\\
+Use the "copy to clipboard" function from the token-access page from the
+previous step to paste the token into the (blind) prompt that results
+from the first "export" command.\\
+~\\
+Ensure that the token is deleted from the test environment after the
+"curl" command is complete, and that the token is invalidated via the
+token-access web interface.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -902,9 +950,10 @@ is invalidated via the token-access web interface.
       & Expected Result &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      The ``curl'' command should return HTTP status code 200 and a VOTable
-containing a list of tables in the TAP service should be
-obtained.\\[2\baselineskip]Retain the VOTable file in the test records.
+      The "curl" command should return HTTP status code 200 and a VOTable
+containing a list of tables in the TAP service should be obtained.\\
+~\\
+Retain the VOTable file in the test records.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -933,8 +982,9 @@ test case in Jira.
 
     This test case verifies that the Portal Aspect of the Science Platform
 is accessible to authorized users through a login process, and that TAP
-searches can be performed from the Portal Aspect UI.\\[2\baselineskip]In
-so doing and in conjunction with the other LDM-503-10a test cases
+searches can be performed from the Portal Aspect UI.\\
+~\\
+In so doing and in conjunction with the other LDM-503-10a test cases
 collected under LVV-P48, it addresses all or part of the following
 requirements:
 
@@ -992,9 +1042,9 @@ the Portal Aspect.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Test performed on
-https://lsst-lsp-int.ncsa.illinois.edu/\\[2\baselineskip]Login screen
-displayed as expected.
+      Test performed on https://lsst-lsp-int.ncsa.illinois.edu/\\
+~\\
+Login screen displayed as expected.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1029,10 +1079,11 @@ should be displayed.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      TAP search screen displayed upon login. ~Username ``Gregory
-Dubois-Felsmann'' displayed.\\[2\baselineskip]Logging out resulted in
-the ``Sign in with OpenID Connect'' button being displayed. ~See
-DM-22350 for an issue regarding that result.
+      TAP search screen displayed upon login. ~Username "Gregory
+Dubois-Felsmann" displayed.\\
+~\\
+Logging out resulted in the "Sign in with OpenID Connect" button being
+displayed. ~See DM-22350 for an issue regarding that result.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1040,7 +1091,7 @@ DM-22350 for an issue regarding that result.
 
         & Issues        &
         \begin{minipage}[t]{13cm}{\footnotesize
-          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~``Logout'' buttons in Portal and Notebook Aspects: non-user-friendly
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~"Logout" buttons in Portal and Notebook Aspects: non-user-friendly
 result, and apparently incomplete logout
 
         \vspace{\dp0}
@@ -1075,10 +1126,11 @@ as in the previous step.
       \begin{minipage}[t]{13cm}{\footnotesize
       Because of the logout issues in DM-22350, before carrying out this step
 I cleared my browser history to ensure no carryover of old
-credentials/tokens/authorization headers.\\[2\baselineskip]Logging in
-with Caltech credentials that had been associated with my NCSA account
-via identity.lsst.org, I reached the same Portal screen with ``Gregory
-Dubois-Felsmann'' displayed.
+credentials/tokens/authorization headers.\\
+~\\
+Logging in with Caltech credentials that had been associated with my
+NCSA account via identity.lsst.org, I reached the same Portal screen
+with "Gregory Dubois-Felsmann" displayed.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1149,19 +1201,21 @@ accessible.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      The SDSS ``RunDeepSource'' (deep detection) and ``RunDeepForcedSource''
-(forced photometry) tables are available, under the
-``sdss\_stripe82\_01'' schema (along with a number of additional tables
-from the original deployment).\\[2\baselineskip]The WISE
-``allwise\_p3as\_psd'' (deep detection) and ``allwise\_p3as\_mep''
-(forced photometry) tables are available, under the ``wise\_00'' schema
+      The SDSS "RunDeepSource" (deep detection) and "RunDeepForcedSource"
+(forced photometry) tables are available, under the "sdss\_stripe82\_01"
+schema (along with a number of additional tables from the original
+deployment).\\
+~\\
+The WISE "allwise\_p3as\_psd" (deep detection) and "allwise\_p3as\_mep"
+(forced photometry) tables are available, under the "wise\_00" schema
 (along with a number of additional tables from the original deployment).
 The three single-epoch source photometry tables do not seem to be
-visible.\\[2\baselineskip]While this is not formally a deviation from
-the test plan as written, these tables are all missing explanatory text
-in the TAP\_SCHEMA metadata used by the Portal TAP interface, so there
-is no user-friendly way to determine the meaning of the tables available
-to query.
+visible.\\
+~\\
+While this is not formally a deviation from the test plan as written,
+these tables are all missing explanatory text in the TAP\_SCHEMA
+metadata used by the Portal TAP interface, so there is no user-friendly
+way to determine the meaning of the tables available to query.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1186,10 +1240,10 @@ TAP\_SCHEMA
       \begin{minipage}[t]{13cm}{\footnotesize
       Perform a TAP search on the AllWISE source catalog around the equatorial
 coordinates (2, 0) (degrees), with a 30 arcminute radius, using the
-Portal UI to specify the query (select the ``Single Table'' radio
-button). ~\\
-To find the AllWISE source catalog, select the ``wise\_00'' schema from
-the schema menu, and then the ``wise\_00.allwise\_p3as\_psd'' table from
+Portal UI to specify the query (select the "Single Table" radio button).
+~\\
+To find the AllWISE source catalog, select the "wise\_00" schema from
+the schema menu, and then the "wise\_00.allwise\_p3as\_psd" table from
 the table menu.\\
 When the query completes, note the total number of rows in the table, as
 displayed in the table header, and record it.
@@ -1216,11 +1270,11 @@ configurable 2D density plot.
 table of 128 100-row pages (that default page size is configurable, and
 can be changed on the fly by the user). ~They were also displayed as an
 overlay on a 2MASS color HiPS image, and as an x-y density plot, with
-the axes (ra,decl) selected by default, but easily changed in the
-UI.\\[2\baselineskip]The test runner issued the query requesting the
-following columns (which should have been called out in the test
-specification): ra, decl, cntr, source\_id, coadd\_id, w1mpro, w2mpro,
-w3mpro, w4mpro.
+the axes (ra,decl) selected by default, but easily changed in the UI.\\
+~\\
+The test runner issued the query requesting the following columns (which
+should have been called out in the test specification): ra, decl, cntr,
+source\_id, coadd\_id, w1mpro, w2mpro, w3mpro, w4mpro.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1236,8 +1290,8 @@ w3mpro, w4mpro.
 in CSV format. ~Use a line-counting tool to find the number of rows in
 the result, record it, and compare it with the reported number from the
 previous step. ~Ensure that the CSV file's name is
-``LVV-T1334-output.csv'' and save it to the designated repository for
-test outputs.
+"LVV-T1334-output.csv" and save it to the designated repository for test
+outputs.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1260,9 +1314,10 @@ match the number of rows in the table header in the UI.
 12718 12718 1567903 LVV-T1334-output.csv\\
 \% head -2 LVV-T1334-output.csv\\
 cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro\\
-15100001351031627,0015p000\_ac51,-0.07016340,1.54437160,0015p000\_ac51-031627,16.36700000,15.81700000,12.21100000,8.40600000\\[2\baselineskip]12,718
-rows in the file is the expectation from Step 6: 12,717 plus one header
-row.
+15100001351031627,0015p000\_ac51,-0.07016340,1.54437160,0015p000\_ac51-031627,16.36700000,15.81700000,12.21100000,8.40600000\\
+~\\
+12,718 rows in the file is the expectation from Step 6: 12,717 plus one
+header row.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1275,9 +1330,9 @@ row.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Return to the TAP search screen in the UI (this can be done with the
-``TAP Searches'' button near the top of the window), select the ``ADQL''
+"TAP Searches" button near the top of the window), select the "ADQL"
 radio button, and view and record the ADQL text displayed for the query
-performed. ~Select ``Cancel'' to dismiss the search screen.
+performed. ~Select "Cancel" to dismiss the search screen.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1296,8 +1351,9 @@ search, using the CONTAINS() and CIRCLE() functions.
 
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
-      The button is labeled ``LSST TAP'', not ``TAP
-Searches''.\\[2\baselineskip]The ADQL text is:\\
+      The button is labeled "LSST TAP", not "TAP Searches".\\
+~\\
+The ADQL text is:\\
 SELECT cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro
 FROM wise\_00.allwise\_p3as\_psd WHERE CONTAINS(POINT('ICRS', ra,
 decl),CIRCLE('ICRS', 2, 0, 0.5))=1
@@ -1312,9 +1368,9 @@ decl),CIRCLE('ICRS', 2, 0, 0.5))=1
       9 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Select the ``i''-in-a-circle button in the table header. ~In the
-resulting dialog box, click on the copy-to-clipboard icon for the TAP
-job URL for the query and paste the URL into the test record.
+      Select the "i"-in-a-circle button in the table header. ~In the resulting
+dialog box, click on the copy-to-clipboard icon for the TAP job URL for
+the query and paste the URL into the test record.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1345,7 +1401,7 @@ job URL for the query and paste the URL into the test record.
       \begin{minipage}[t]{13cm}{\footnotesize
       In a separate browser window, access the page available at the URL
 obtained from the previous step. ~Observe and record the ADQL text for
-the query, in the `\textless{}uws:parameter id=``query''\textgreater{}'
+the query, in the '\textless{}uws:parameter id="query"\textgreater{}'
 XML element. ~Verify that it matches the ADQL text obtained from the UI
 in a previous step.
 
@@ -1366,7 +1422,7 @@ in a previous step.
       & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
       \begin{minipage}[t]{13cm}{\footnotesize
       Pass:\\
-\textless{}uws:parameter id=``QUERY''\textgreater{}\\
+\textless{}uws:parameter id="QUERY"\textgreater{}\\
 SELECT cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro
 FROM wise\_00.allwise\_p3as\_psd WHERE CONTAINS(POINT('ICRS', ra,
 decl),CIRCLE('ICRS', 2, 0, 0.5))=1\\
@@ -1391,10 +1447,11 @@ test case in Jira.
 
     This test case verifies that the Notebook Aspect of the Science Platform
 is accessible to authorized users through a login process, and that TAP
-searches can be performed from Python code in the Notebook
-Aspect.\\[2\baselineskip]In so doing and in conjunction with the other
-LDM-503-10a test cases collected under LVV-P48, it addresses all or part
-of the following requirements:
+searches can be performed from Python code in the Notebook Aspect.\\
+~\\
+In so doing and in conjunction with the other LDM-503-10a test cases
+collected under LVV-P48, it addresses all or part of the following
+requirements:
 
 \begin{itemize}
 \tightlist
@@ -1413,7 +1470,7 @@ level of partial capability during construction.
 
     \textbf{ Preconditions}:\\
     Test case LVV-T1334 must have already been executed and the prescribed
-outputs saved, notably including the ``LVV-T1334-output.csv'' file.
+outputs saved, notably including the "LVV-T1334-output.csv" file.
 
 
     Execution status: {\bf Not Executed }
@@ -1431,11 +1488,13 @@ outputs saved, notably including the ``LVV-T1334-output.csv'' file.
       \begin{minipage}[t]{13cm}{\footnotesize
       If~\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334
 (1.0)} has just been carried out, the tester will already be logged in
-to the Portal Aspect; skip to the next step.\\[2\baselineskip]Otherwise,
-use a Web browser to navigate to the landing page of the LSP instance
-under test, and click through to the Portal Aspect link. ~This should
-trigger a login process; the tester should log in. ~Non-NCSA credentials
-should be used (or have been used) to log in to the Portal Aspect.
+to the Portal Aspect; skip to the next step.\\
+~\\
+Otherwise, use a Web browser to navigate to the landing page of the LSP
+instance under test, and click through to the Portal Aspect link. ~This
+should trigger a login process; the tester should log in. ~Non-NCSA
+credentials should be used (or have been used) to log in to the Portal
+Aspect.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1497,8 +1556,8 @@ of a Notebook Aspect session should be visible.
       3 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Use the Notebook Aspect UI to create a ``small'' session using the most
-recent ``recommended'' (weekly) release image.
+      Use the Notebook Aspect UI to create a "small" session using the most
+recent "recommended" (weekly) release image.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1676,8 +1735,8 @@ verifies that \emph{logout} is cross-Aspect.)
       Launch a web browser and navigate to the landing page for the LSP
 instance under test. ~Navigate to the Notebook Aspect. ~When prompted
 for a login, use NCSA credentials (for the same user as the non-NCSA
-credentials used above). ~Request a session of the ``medium'' category
-with the most recent ``recommended'' (weekly) release image.
+credentials used above). ~Request a session of the "medium" category
+with the most recent "recommended" (weekly) release image.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1739,8 +1798,8 @@ credentials lead to the same Notebook Aspect user environment.)
       11 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Clone the test notebook for LDM-503-10a, ``LDM-503-10a-test.ipynb'',
-into the user environment from the TBD tag of the TBD Github repository.
+      Clone the test notebook for LDM-503-10a, "LDM-503-10a-test.ipynb", into
+the user environment from the TBD tag of the TBD Github repository.
 ~Record the SHA that applies to the version of the test notebook that
 has been cloned.
 
@@ -1772,7 +1831,7 @@ has been cloned.
       \begin{minipage}[t]{13cm}{\footnotesize
       Open the test notebook and insert the URL saved from the execution of
 LVV-T1334, Step 9 into the input cell that reads\\
-``portal\_job\_url = ''''.
+"portal\_job\_url = ''".
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -1920,7 +1979,7 @@ quit the Web browser in use.
       17 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Copy the file ``LVV-T1334-output.csv'' that was saved in the output
+      Copy the file "LVV-T1334-output.csv" that was saved in the output
 repository for the LVV-T1334 test case into the home directory of the
 notebook session.
 
@@ -1988,9 +2047,11 @@ test case in Jira.
     This test case verifies that the TAP service in the API Aspect of the
 Science Platform is accessible to authorized users through a login
 process, and that TAP searches can be performed using the IVOA TAP
-protocol from remote sites.\\[2\baselineskip]In so doing and in
-conjunction with the other LDM-503-10a test cases collected under
-LVV-P48, it addresses all or part of the following requirements:
+protocol from remote sites.\\
+~\\
+In so doing and in conjunction with the other LDM-503-10a test cases
+collected under LVV-P48, it addresses all or part of the following
+requirements:
 
 \begin{itemize}
 \tightlist
@@ -2010,7 +2071,7 @@ level of partial capability during construction.
 
     \textbf{ Preconditions}:\\
     Test case LVV-T1334 must have already been executed and the prescribed
-outputs saved, notably including the ``LVV-T1334-output.csv'' file.
+outputs saved, notably including the "LVV-T1334-output.csv" file.
 
 
     Execution status: {\bf Not Executed }
@@ -2027,9 +2088,9 @@ outputs saved, notably including the ``LVV-T1334-output.csv'' file.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       On the local computer, clone the test notebook for LDM-503-10a,
-``LDM-503-10a-test.ipynb'', into the user environment from the TBD tag
-of the TBD Github repository. ~Note the SHA that applies to the version
-of the test notebook that has been cloned.
+"LDM-503-10a-test.ipynb", into the user environment from the TBD tag of
+the TBD Github repository. ~Note the SHA that applies to the version of
+the test notebook that has been cloned.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -2057,7 +2118,7 @@ of the test notebook that has been cloned.
       2 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Launch a LOCAL instance of JupyterLab (i.e., by running ``jupyter lab'')
+      Launch a LOCAL instance of JupyterLab (i.e., by running "jupyter lab")
 on the computer to be used for testing. ~Ensure that the test notebook
 is visible from within JupyterLab. ~\textbf{NB: as a reminder, this test
 case must NOT be run in the Notebook Aspect.}
@@ -2122,10 +2183,10 @@ Copy the access token to the clipboard.
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Within the Posix shell session from which JupyterLab is to be launched,
-set the environment variable ``ACCESS\_TOKEN'' to the value of the token
+set the environment variable "ACCESS\_TOKEN" to the value of the token
 obtained in the previous step. To do this without exposing the token
-unnecessarily, it is suggested to use the ``read -s'' command, pasting
-the token in at the no-echo prompt this command produces.
+unnecessarily, it is suggested to use the "read -s" command, pasting the
+token in at the no-echo prompt this command produces.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -2240,7 +2301,7 @@ TBD location as a record of the test.
       8 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Copy the file ``LVV-T1334-output.csv'' that was saved in the output
+      Copy the file "LVV-T1334-output.csv" that was saved in the output
 repository for the LVV-T1334 test case into the home directory of the
 JupyterLab session.
 
@@ -2270,8 +2331,8 @@ JupyterLab session.
       9 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      On the local computer, execute the command ``pip install pyvo
-jupyterlabutils'' in the local environment. ~(It is suggested to do this
+      On the local computer, execute the command "pip install pyvo
+jupyterlabutils" in the local environment. ~(It is suggested to do this
 in a venv or conda environment.)
 
       \vspace{\dp0}
@@ -2302,7 +2363,7 @@ in a venv or conda environment.)
       \begin{minipage}[t]{13cm}{\footnotesize
       Open the test notebook and insert the URL saved from the execution of
 LVV-T1334, Step 9 into the input cell that reads\\
-``portal\_job\_url = ''''.
+"portal\_job\_url = ''".
 
       \vspace{\dp0}
       } \end{minipage} \\
