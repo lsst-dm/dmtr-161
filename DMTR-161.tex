@@ -27,7 +27,8 @@
 
 
 \setDocAbstract{
-This is the test plan and report for LDM-503-10a: (LSP with Authentication and TAP), an LSST level 2 milestone pertaining to the Data Management Subsystem.
+This is the test plan and report for LDM-503-10a: (LSP with Authentication and TAP),
+an LSST level 2 milestone pertaining to the Data Management Subsystem.
 }
 
 
@@ -86,12 +87,15 @@ This document was generated from Jira, obtaining the relevant information from t
   \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCycle/LVV-C85}{LVV-C85}
 ).
 
-Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}), the applicable documentation, and explains how this document is organized.
+Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}),
+the applicable documentation, and explains how this document is organized.
 Section \ref{sect:configuration}  describes the configuration used for this test.
 Section \ref{sect:personnel} describes the necessary roles and lists the individuals assigned to them.
-%Section \ref{sect:plannedtestactivities} provides the list of planned test cycles and test cases, including all relevant information that fully describes the test campaign.
+%Section \ref{sect:plannedtestactivities} provides the list of planned test cycles and test cases,
+including all relevant information that fully describes the test campaign.
 
-Section \ref{sect:overview} provides a summary of the test results, including an overview in Table \ref{table:summary}, an overall assessment statement and suggestions for possible improvements.
+Section \ref{sect:overview} provides a summary of the test results, including an overview in Table \ref{table:summary},
+an overall assessment statement and suggestions for possible improvements.
 Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
 
 The current status of test plan LVV-P48 in Jira is \textbf{ Approved }.
@@ -133,19 +137,44 @@ The personnel involved in the test campaign is shown in the following table.
 \textbf{Test Case} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}
 & {\small Jeffrey Carlin } & {\small Gregory Dubois-Felsmann } &
-{\small  } \\ \hline
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
 & {\small Jeffrey Carlin } & {\small Gregory Dubois-Felsmann } &
-{\small  } \\ \hline
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
 & {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
-{\small  } \\ \hline
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
 & {\small Gregory Dubois-Felsmann } & {\small  } &
-{\small  } \\ \hline
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
 & {\small Gregory Dubois-Felsmann } & {\small  } &
-{\small  } \\ \hline
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
 \end{longtable}
 
 \newpage
@@ -174,7 +203,8 @@ pre-arranged VPN-free access to the relevant NCSA network.
 
     \medskip
     \end{minipage}
-    &     \\\hline
+    &
+    \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
     & Pass w/ Deviation &
     \begin{minipage}[]{0.56\textwidth}
@@ -185,7 +215,10 @@ pre-arranged VPN-free access to the relevant NCSA network.
 
     \medskip
     \end{minipage}
-    &     \\\hline
+    &
+          \href{https://jira.lsstcorp.org/browse/DM-22338}{DM-22338}
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}
+    \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
     & Pass w/ Deviation &
     \begin{minipage}[]{0.56\textwidth}
@@ -195,7 +228,11 @@ internal network with VPN-free access to the LSP clusters at NCSA.
 
     \medskip
     \end{minipage}
-    &     \\\hline
+    &
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}
+          \href{https://jira.lsstcorp.org/browse/DM-22421}{DM-22421}
+          \href{https://jira.lsstcorp.org/browse/DM-22422}{DM-22422}
+    \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
     & Not Executed &
     \begin{minipage}[]{0.56\textwidth}
@@ -203,7 +240,8 @@ internal network with VPN-free access to the LSP clusters at NCSA.
     
     \medskip
     \end{minipage}
-    &     \\\hline
+    &
+    \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
     & Not Executed &
     \begin{minipage}[]{0.56\textwidth}
@@ -211,7 +249,8 @@ internal network with VPN-free access to the LSP clusters at NCSA.
     
     \medskip
     \end{minipage}
-    &     \\\hline
+    &
+    \\\hline
 
 \caption{Test Results Summary}
 \label{table:summary}
