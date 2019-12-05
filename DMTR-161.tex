@@ -1868,6 +1868,36 @@ has been cloned.
       12 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
+      Copy the file "LVV-T1334-output.csv" that was saved in the output
+repository for the LVV-T1334 test case into the home directory of the
+notebook session.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      13 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
       Open the test notebook and insert the URL saved from the execution of
 LVV-T1334, Step 9 into the input cell that reads\\
 "portal\_job\_url = ''".
@@ -1895,7 +1925,35 @@ LVV-T1334, Step 9 into the input cell that reads\\
 
       & Status          & Not Executed \\ \hline
 
-      13 & Description &
+      14 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Execute the entire notebook.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      15 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Record the success and/or failure indications that appear in the final
@@ -1925,7 +1983,7 @@ If the notebook execution produced an exception, record that.
 
       & Status          & Not Executed \\ \hline
 
-      14 & Description &
+      16 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Save and close the test notebook. ~Save the fully-executed notebook in
@@ -1954,7 +2012,7 @@ TBD location as a record of the test.
 
       & Status          & Not Executed \\ \hline
 
-      15 & Description &
+      17 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Without logging out, open a new browser window or tab, and navigate to
@@ -1986,69 +2044,11 @@ username displayed at the upper right is the same one as in \textbf{Step
 
       & Status          & Not Executed \\ \hline
 
-      16 & Description &
+      18 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Log out of the Notebook Aspect, close the Portal Aspect windows, and
 quit the Web browser in use.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      17 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Copy the file "LVV-T1334-output.csv" that was saved in the output
-repository for the LVV-T1334 test case into the home directory of the
-notebook session.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      18 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Execute the entire notebook.
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -2157,10 +2157,9 @@ the test notebook that has been cloned.
       2 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
-      Launch a LOCAL instance of JupyterLab (i.e., by running "jupyter lab")
-on the computer to be used for testing. ~Ensure that the test notebook
-is visible from within JupyterLab. ~\textbf{NB: as a reminder, this test
-case must NOT be run in the Notebook Aspect.}
+      On the local computer, execute the command "pip install pyvo
+jupyterlabutils" in the local environment. ~(It is suggested to do this
+in a venv or conda environment.)
 
       \vspace{\dp0}
       } \end{minipage} \\
@@ -2186,6 +2185,36 @@ case must NOT be run in the Notebook Aspect.}
       & Status          & Not Executed \\ \hline
 
       3 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Copy the file "LVV-T1334-output.csv" that was saved in the output
+repository for the LVV-T1334 test case into the home directory of the
+JupyterLab session.
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      4 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Obtain an access token for the TAP service from the LSP instance under
@@ -2218,7 +2247,7 @@ Copy the access token to the clipboard.
 
       & Status          & Not Executed \\ \hline
 
-      4 & Description &
+      5 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Within the Posix shell session from which JupyterLab is to be launched,
@@ -2250,7 +2279,68 @@ token in at the no-echo prompt this command produces.
 
       & Status          & Not Executed \\ \hline
 
-      5 & Description &
+      6 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Launch a LOCAL instance of JupyterLab (i.e., by running "jupyter lab")
+on the computer to be used for testing. ~Ensure that the test notebook
+is visible from within JupyterLab. ~\textbf{NB: as a reminder, this test
+case must NOT be run in the Notebook Aspect.}
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      7 & Description &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      Open the test notebook and insert the URL saved from the execution of
+LVV-T1334, Step 9 into the input cell that reads\\
+"portal\_job\_url = ''".
+
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Expected Result &
+
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
+      \begin{minipage}[t]{13cm}{\footnotesize
+      
+      \vspace{\dp0}
+      } \end{minipage} \\
+      \\ \cdashline{2-3}
+
+
+      & Status          & Not Executed \\ \hline
+
+      8 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Execute the entire notebook.
@@ -2278,7 +2368,7 @@ token in at the no-echo prompt this command produces.
 
       & Status          & Not Executed \\ \hline
 
-      6 & Description &
+      9 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Record the success and/or failure indications that appear in the final
@@ -2308,101 +2398,11 @@ If the notebook execution produced an exception, record that.
 
       & Status          & Not Executed \\ \hline
 
-      7 & Description &
+      10 & Description &
 
       \begin{minipage}[t]{13cm}{\footnotesize
       Save and close the test notebook. ~Save the fully-executed notebook in
 TBD location as a record of the test.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      8 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Copy the file "LVV-T1334-output.csv" that was saved in the output
-repository for the LVV-T1334 test case into the home directory of the
-JupyterLab session.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      9 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      On the local computer, execute the command "pip install pyvo
-jupyterlabutils" in the local environment. ~(It is suggested to do this
-in a venv or conda environment.)
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      10 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Open the test notebook and insert the URL saved from the execution of
-LVV-T1334, Step 9 into the input cell that reads\\
-"portal\_job\_url = ''".
 
       \vspace{\dp0}
       } \end{minipage} \\
