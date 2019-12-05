@@ -12,3 +12,4 @@ configuration
 epoch
 forced photometry
 metadata
+arcmin
