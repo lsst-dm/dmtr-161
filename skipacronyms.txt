@@ -3,6 +3,7 @@ Data Management
 Data Management Subsystem
 Db
 Document
+Firefly
 Science Platform
 Scope
 Stripe 82
