@@ -196,9 +196,8 @@ The personnel involved in the test campaign is shown in the following table.
     & Pass &
     \begin{minipage}[]{9cm}
     \smallskip
-    Test executed against lsst-lsp-int. ~No problems were encountered.\\
-Test executed from an OS X 10.11 iMac on the IPAC internal network, with
-pre-arranged VPN-free access to the relevant NCSA network.
+    Test executed against lsst-lsp-int. ~\\
+No problems were encountered.
 
     \medskip
     \end{minipage}
@@ -209,8 +208,8 @@ pre-arranged VPN-free access to the relevant NCSA network.
     \begin{minipage}[]{9cm}
     \smallskip
     Test executed against lsst-lsp-int. ~\\
-Test executed from an OS X 10.11 iMac on the IPAC internal network, with
-pre-arranged VPN-free access to the relevant NCSA network.
+Minor concerns with the UX for logout operations, and with the
+completeness of the result of logging out.
 
     \medskip
     \end{minipage}
@@ -222,8 +221,13 @@ pre-arranged VPN-free access to the relevant NCSA network.
     & Pass w/ Deviation &
     \begin{minipage}[]{9cm}
     \smallskip
-    Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
-internal network with VPN-free access to the LSP clusters at NCSA.
+    Test executed in full against lsst-lsp-int.\\
+As preparation for the execution of LVV-T1436 and LVV-T1437, Steps 6 and
+9 were repeated several days later against lsst-lsp-stable in order to
+refresh the TAP-results URL needed for the subsequent tests.\\
+Minor deviations: certain WISE/NEOWISE single-epoch photometry tables,
+not needed for the test, were not visible in the TAP service; same
+concerns with logout behavior as for LVV-T622.
 
     \medskip
     \end{minipage}
@@ -236,19 +240,23 @@ internal network with VPN-free access to the LSP clusters at NCSA.
     & Pass w/ Deviation &
     \begin{minipage}[]{9cm}
     \smallskip
-    Firefox 70.0.1 was used on OS X 10.11.6 on a machine on the IPAC
-internal network. ~No VPN connection was required.
+    Test executed against lsst-lsp-stable.\\
+No concerns except the same minor issues with logout behavior reported
+for LVV-T622.
 
     \medskip
     \end{minipage}
     &
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}
     \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
     & Pass w/ Deviation &
     \begin{minipage}[]{9cm}
     \smallskip
-    Firefox 70.0.1 was used on OS X 10.11.6 on a machine on the IPAC
-internal network. ~No VPN connection was required.
+    Test executed against lsst-lsp-stable.\\
+Minor concern: lack of usability of the latest version of the LSST
+``convenience API'' for TAP service access from offsite; fixed by
+reverting to an earlier version.
 
     \medskip
     \end{minipage}
@@ -347,7 +355,10 @@ instance of the LSP because of maintenance issues with the Portal Aspect
 on lsst-lsp-stable.\\
 Following the return to normal operation of lsst-lsp-stable, part of
 LVV-T1334 was repeated there, and LVV-T1436 and LVV-T1437 were executed
-there.
+there.\\[2\baselineskip]All tests were executed from an OS X 10.11.6
+iMac host on the IPAC internal network, with prearranged VPN-free access
+to the LSP instances at NCSA. ~Tests requiring a web browser were
+carried out using Firefox 70.0.1.
 
 
 \subsubsection{Test Cases in LVV-C85 Test Cycle}
@@ -367,9 +378,8 @@ described by the IVOA TAP 1.1 specification. ~ ~
 
 Execution status: {\bf Pass }
 
-Final comment:\\Test executed against lsst-lsp-int. ~No problems were encountered.\\
-Test executed from an OS X 10.11 iMac on the IPAC internal network, with
-pre-arranged VPN-free access to the relevant NCSA network.
+Final comment:\\Test executed against lsst-lsp-int. ~\\
+No problems were encountered.
 
 
 
@@ -591,8 +601,8 @@ are accessible only to authenticated users.
 Execution status: {\bf Pass w/ Deviation }
 
 Final comment:\\Test executed against lsst-lsp-int. ~\\
-Test executed from an OS X 10.11 iMac on the IPAC internal network, with
-pre-arranged VPN-free access to the relevant NCSA network.
+Minor concerns with the UX for logout operations, and with the
+completeness of the result of logging out.
 
 
 
@@ -1083,8 +1093,13 @@ level of partial capability during construction.
 
 Execution status: {\bf Pass w/ Deviation }
 
-Final comment:\\Executed with Firefox 70.0.1 on OS X 10.11.6, from a host on the IPAC
-internal network with VPN-free access to the LSP clusters at NCSA.
+Final comment:\\Test executed in full against lsst-lsp-int.\\
+As preparation for the execution of LVV-T1436 and LVV-T1437, Steps 6 and
+9 were repeated several days later against lsst-lsp-stable in order to
+refresh the TAP-results URL needed for the subsequent tests.\\
+Minor deviations: certain WISE/NEOWISE single-epoch photometry tables,
+not needed for the test, were not visible in the TAP service; same
+concerns with logout behavior as for LVV-T622.
 
 
 
@@ -1376,7 +1391,12 @@ match the number of rows in the table header in the UI.
 cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro\\
 15100001351031627,0015p000\_ac51,-0.07016340,1.54437160,0015p000\_ac51-031627,16.36700000,15.81700000,12.21100000,8.40600000\\[2\baselineskip]12,718
 rows in the file is the expectation from Step 6: 12,717 plus one header
-row.
+row.\\[2\baselineskip]The file was attached to the test execution record
+in Jira (LVV-E556).\\[2\baselineskip]The file was also saved in the
+\href{https://github.com/lsst-dm/dmtr-161}{lsst-dm/dmtr-161} repository
+as
+"\href{https://github.com/lsst-dm/dmtr-161/blob/LVV-T1334-e1/executions/LVV-T1334/LVV-T1334-output.csv}{executions/LVV-T1334/LVV-T1334-output.csv}``.
+Tag ''LVV-T1334-e1" was applied.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1517,8 +1537,9 @@ outputs saved, notably including the ``LVV-T1334-output.csv'' file.
 
 Execution status: {\bf Pass w/ Deviation }
 
-Final comment:\\Firefox 70.0.1 was used on OS X 10.11.6 on a machine on the IPAC
-internal network. ~No VPN connection was required.
+Final comment:\\Test executed against lsst-lsp-stable.\\
+No concerns except the same minor issues with logout behavior reported
+for LVV-T622.
 
 
 
@@ -1740,6 +1761,13 @@ cache invalidation will be needed.
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
+ & Issues found executing this step:  \\
+ & \begin{minipage}[t]{13cm}{\footnotesize
+\href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~``Logout'' buttons in Portal and Notebook Aspects: non-user-friendly
+result, and apparently incomplete logout
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
  & Status: \textbf{ Pass w/ Deviation } \\ \hline
 
 8 & Description \\
@@ -2114,8 +2142,10 @@ outputs saved, notably including the ``LVV-T1334-output.csv'' file.
 
 Execution status: {\bf Pass w/ Deviation }
 
-Final comment:\\Firefox 70.0.1 was used on OS X 10.11.6 on a machine on the IPAC
-internal network. ~No VPN connection was required.
+Final comment:\\Test executed against lsst-lsp-stable.\\
+Minor concern: lack of usability of the latest version of the LSST
+``convenience API'' for TAP service access from offsite; fixed by
+reverting to an earlier version.
 
 
 
@@ -2172,7 +2202,9 @@ in a venv or conda environment.)
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
 It proved necessary to back up to jupyterlabutils 0.5.0 (the current
-version being 0.5.3) in order to avoid a token-validation failure.
+version being 0.5.3) in order to avoid a token-validation failure. ~Note
+that the requirement for the offsite usability of the TAP-query-access
+convenience functions in this package has not been formally established.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
