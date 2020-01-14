@@ -120,7 +120,7 @@ The current status of test plan LVV-P48 in Jira is \textbf{ Approved }.
 \section{Personnel}
 \label{sect:personnel}
 
-The personnel involved in the test campaign is shown in the following table.
+The personnel involved in the test campaign are shown in the following table.
 
 \begin{longtable}{p{3cm}p{3cm}p{3cm}p{6cm}}
 \hline
@@ -1894,10 +1894,10 @@ appropriate instructions would have been:
   Copy the ``notebooks/LDM-503-10a-test.ipynb'' notebook to a new
   subdirectory of the repository clone, ``executions/LVV-T1436''.
 \item
-  Record the SHA corresponding to the above tag.
+  Record the SHA-1 corresponding to the above tag.
 \end{enumerate}
 
-The SHA for``LVV-C85-unexecuted'' is
+The SHA-1 for``LVV-C85-unexecuted'' is
 \href{https://github.com/lsst-dm/dmtr-161/commit/6b560e563b3194af76ebdc3b1b95704fccf16b4c}{6b560e5}.
 
 \medskip }
@@ -2175,6 +2175,25 @@ of the test notebook that has been cloned.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The details of this bookkeeping were worked out after the substance of
+the test case and test plan were approved.\\[2\baselineskip]The
+appropriate instructions would have been:
+
+\begin{enumerate}
+\tightlist
+\item
+  Clone the ``LVV-C85-unexecuted'' tag of the
+  \href{https://github.com/lsst-dm/dmtr-161}{lsst-dm/dmtr-161}
+  repository into the Notebook Aspect user environment.
+\item
+  Copy the ``notebooks/LDM-503-10a-test.ipynb'' notebook to a new
+  subdirectory of the repository clone, ``executions/LVV-T1437''.
+\item
+  Record the SHA-1 corresponding to the above tag.
+\end{enumerate}
+
+The SHA-1 for``LVV-C85-unexecuted'' is
+\href{https://github.com/lsst-dm/dmtr-161/commit/6b560e563b3194af76ebdc3b1b95704fccf16b4c}{6b560e5}.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2383,6 +2402,10 @@ Execute the entire notebook.
 
  & Actual Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The notebook runs to completion successfully.\\[2\baselineskip](Note: It
+is at this stage that the ``token-validation failure'' mentioned in Step
+2 above appears if a too-recent version of the ``jupyterlabutils''
+package is installed.)
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
