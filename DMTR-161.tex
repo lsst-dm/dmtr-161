@@ -9,6 +9,8 @@
 \providecommand{\tightlist}{
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+\setcounter{tocdepth}{4}
+
 \begin{document}
 
 \def\milestoneName{LSP with Authentication and TAP}
@@ -27,7 +29,8 @@
 
 
 \setDocAbstract{
-This is the test plan and report for LDM-503-10a: (LSP with Authentication and TAP), an LSST level 2 milestone pertaining to the Data Management Subsystem.
+This is the test plan and report for LDM-503-10a: (LSP with Authentication and TAP),
+an LSST level 2 milestone pertaining to the Data Management Subsystem.
 }
 
 
@@ -81,15 +84,18 @@ This document was generated from Jira, obtaining the relevant information from t
   \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCycle/LVV-C85}{LVV-C85}
 ).
 
-Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}), the applicable documentation, and explains how this document is organized.
+Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}),
+the applicable documentation, and explains how this document is organized.
 Section \ref{sect:configuration}  describes the configuration used for this test.
 Section \ref{sect:personnel} describes the necessary roles and lists the individuals assigned to them.
-%Section \ref{sect:plannedtestactivities} provides the list of planned test cycles and test cases, including all relevant information that fully describes the test campaign.
+%Section \ref{sect:plannedtestactivities} provides the list of planned test cycles and test cases,
+including all relevant information that fully describes the test campaign.
 
-Section \ref{sect:overview} provides a summary of the test results, including an overview in Table \ref{table:summary}, an overall assessment statement and suggestions for possible improvements.
+Section \ref{sect:overview} provides a summary of the test results, including an overview in Table \ref{table:summary},
+an overall assessment statement and suggestions for possible improvements.
 Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
 
-The current status of test plan LVV-P48 in Jira is \textbf{ Approved }.
+The current status of test plan LVV-P48 in Jira is \textbf{ Completed }.
 
 \subsection{References}
 \label{sect:references}
@@ -114,252 +120,389 @@ The current status of test plan LVV-P48 in Jira is \textbf{ Approved }.
 \section{Personnel}
 \label{sect:personnel}
 
-The following personnel are involved in this test activity:
+The personnel involved in the test campaign are shown in the following table.
 
-\begin{itemize}
-\item Test Plan (LVV-P48) owner: Gregory Dubois-Felsmann
-\item Test Cycles:
-\begin{itemize}
-  \item LVV-C85 owner: 
+\begin{longtable}{p{3cm}p{3cm}p{3cm}p{6cm}}
+\hline
+\multicolumn{2}{r}{Test Plan (LVV-P48) owner:} &
+\multicolumn{2}{l}{\textbf{ Gregory Dubois-Felsmann } }\\\hline
+\multicolumn{2}{r}{ LVV-C85 owner:} &
+\multicolumn{2}{l}{\textbf{
     Gregory Dubois-Felsmann
-  \begin{itemize}
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807} tester: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622} tester: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334} tester: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436} tester: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437} tester: 
-  \end{itemize}
-\end{itemize}
-\item Additional Test Personnel involved:
-  \begin{itemize}
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}: 
-    \item Test case \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}: 
-  \end{itemize}
-\end{itemize}
+}
+} \\\hline
+\textbf{Test Case} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}
+& {\small Jeffrey Carlin } & {\small Gregory Dubois-Felsmann } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
+& {\small Jeffrey Carlin } & {\small Gregory Dubois-Felsmann } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
+& {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
+& {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
+& {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\end{longtable}
 
 \newpage
 
-\section{Overview of the Test Results}
+\section{Test Campaign Overview}
 \label{sect:overview}
 
 \subsection{Summary}
 \label{sect:summarytable}
 
-\begin{longtable}{p{0.12\textwidth}p{0.2\textwidth}p{0.56\textwidth}p{0.12\textwidth}}
+\begin{longtable}{p{2cm}p{2.5cm}p{9cm}p{2.5cm}}
 \toprule
+\multicolumn{3}{l}{ Test Plan {\bf LVV-P48: LDM-503-10a: LSP with Authentication and TAP
+ }} & Completed \\\hline
 
-  \multicolumn{3}{c}{ Test Cycle {\bf LVV-C85: LDM-503-10a: LSP with Authentication and TAP
- }} \\\hline
+  \multicolumn{3}{l}{ Test Cycle {\bf LVV-C85: LDM-503-10a: LSP with Authentication and TAP
+ }} & Done \\\hline
 
   {\bf \footnotesize test case} & {\bf \footnotesize status} & {\bf \footnotesize comment} & {\bf \footnotesize issues} \\\toprule
 
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}
-    & Not Executed &  &
-    \\\hline
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
-    & Not Executed &  &
-    \\\hline
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
-    & Not Executed &  &
-    \\\hline
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
-    & Not Executed &  &
-    \\\hline
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
-    & Not Executed &  &
-    \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{LVV-T807}
+    & Pass &
+    \begin{minipage}[]{9cm}
+    \smallskip
+    Test executed against lsst-lsp-int. ~\\
+No problems were encountered.
 
-\caption{Test Results Summary}
+    \medskip
+    \end{minipage}
+    &
+    \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{LVV-T622}
+    & Pass w/ Deviation &
+    \begin{minipage}[]{9cm}
+    \smallskip
+    Test executed against lsst-lsp-int. ~\\
+Minor concerns with the UX for logout operations, and with the
+completeness of the result of logging out.
+
+    \medskip
+    \end{minipage}
+    &
+          \href{https://jira.lsstcorp.org/browse/DM-22338}{DM-22338}
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}
+    \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{LVV-T1334}
+    & Pass w/ Deviation &
+    \begin{minipage}[]{9cm}
+    \smallskip
+    Test executed in full against lsst-lsp-int.\\
+As preparation for the execution of LVV-T1436 and LVV-T1437, Steps 6 and
+9 were repeated several days later against lsst-lsp-stable in order to
+refresh the TAP-results URL needed for the subsequent tests.\\
+Minor deviations: certain WISE/NEOWISE single-epoch photometry tables,
+not needed for the test, were not visible in the TAP service; same
+concerns with logout behavior as for LVV-T622.
+
+    \medskip
+    \end{minipage}
+    &
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}
+          \href{https://jira.lsstcorp.org/browse/DM-22421}{DM-22421}
+          \href{https://jira.lsstcorp.org/browse/DM-22422}{DM-22422}
+    \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{LVV-T1436}
+    & Pass w/ Deviation &
+    \begin{minipage}[]{9cm}
+    \smallskip
+    Test executed against lsst-lsp-stable.\\
+No concerns except the same minor issues with logout behavior reported
+for LVV-T622.
+
+    \medskip
+    \end{minipage}
+    &
+          \href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}
+    \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{LVV-T1437}
+    & Pass w/ Deviation &
+    \begin{minipage}[]{9cm}
+    \smallskip
+    Test executed against lsst-lsp-stable.\\
+Minor concern: lack of usability of the latest version of the LSST
+``convenience API'' for TAP service access from offsite; fixed by
+reverting to an earlier version.
+
+    \medskip
+    \end{minipage}
+    &
+          \href{https://jira.lsstcorp.org/browse/DM-22538}{DM-22538}
+    \\\hline
+\caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
 
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Not yet available.
+The test successfully demonstrated cross-Aspect single-sign-on and the
+federated-identity functionality, as well as demonstrating authenticated
+access to synchronous and asynchronous TAP queries from the Portal
+Aspect, Notebook Aspect, and from outside the LSST environment acting
+directly on the API Aspect. ~The test demonstrated the ability to
+perform a TAP query in the Portal Aspect and retrieve the results from
+the Notebook Aspect, or remotely, by means of the query URL obtained
+from the Portal UI.\\[2\baselineskip]Minor issues were observed in the
+following areas:
+
+\begin{enumerate}
+\tightlist
+\item
+  ``Logout'' functionality was not particularly user-friendly, and in
+  some cases may not have performed a complete logout
+\item
+  The CILogon federated-ID-authentication service may in some cases
+  allow a user to determine whether a userid string is valid at NCSA
+  even without a password
+\item
+  The existing set of tables in Qserv were not organized or described as
+  well in the API Aspect TAP service's TAP\_SCHEMA interface, and
+  therefore also not in the Portal Aspect UI - however these were
+  corrected immediately following the test under DM-22422
+\item
+  The WISE (including NEOWISE) single-epoch photometry tables were not
+  visible in the TAP service - this has been understood and will be
+  addressed
+\item
+  The most recent version of the Python ``convenience API'' for TAP
+  searches in the ``jupyterlabutils'' package became unusable for
+  external queries because of an issue with token validation. ~A
+  previous version supported the test successfully, and the path forward
+  for this API will be discussed.
+\end{enumerate}
+
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
-Not yet available.
+The most salient UX improvement based on this testing would be to change
+the ``logout'' functionality in both the Notebook and Portal Aspects to
+return the user to the LSP landing page, or some other recognizable
+page, as well as to add to the landing page an indication of whether the
+user is logged in or not.\\[2\baselineskip]Ongoing attention to the
+quality of the information in TAP\_SCHEMA would be highly desirable.
+This is more of a science-support issue than a TAP-service-development
+issue.\\[2\baselineskip]Some thought should be given to what support
+code, examples, and documentation should be provided for external users
+of the TAP service (and other API Aspect services as they become
+available).~
+
 
 \newpage
 \section{Detailed Test Results}
 \label{sect:detailedtestresults}
 
-
-  \subsection{Test Cycle LVV-C85 }
+\subsection{Test Cycle LVV-C85 }
 
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C85}{LDM-503-10a: LSP with Authentication and TAP
 }} in Jira.
 
-  LDM-503-10a: LSP with Authentication and TAP
+LDM-503-10a: LSP with Authentication and TAP
 \\
-  Status: Not Executed
+Status: Done
 
-  Execute the test cases associated with the DM milestone LDM-503-10a.
-
-
-  \subsubsection{Software Version/Baseline}
-    Not provided.
-
-  \subsubsection{Configuration}
-    Not provided.
-
-  \subsubsection{Test Cases in LVV-C85 Test Cycle}
+Execute the test cases associated with the DM milestone LDM-503-10a.
 
 
-    \paragraph{Test Case LVV-T807 - Verify synchronous TAP queries
+\subsubsection{Software Version/Baseline}
+Portal Aspect tests were carried out on suit:1.1.1 and
+Caltech-IPAC/firefly:release-2019.3.2.\\
+The LSST Python environment in the Notebook Aspect was based on weekly
+2019\_48, including JupyterLab v1.2.3.\\
+LSST JupyterHub version sciplat-hub-with-config:0.16.7 was in operation
+in the instance under test.\\
+TAP version 1.0.1 was the version under test.
+
+
+\subsubsection{Configuration}
+LVV-T807, LVV-T637, and LVV-T1334 were carried on out the lsst-lsp-int
+instance of the LSP because of maintenance issues with the Portal Aspect
+on lsst-lsp-stable.\\
+Following the return to normal operation of lsst-lsp-stable, part of
+LVV-T1334 was repeated there, and LVV-T1436 and LVV-T1437 were executed
+there.\\[2\baselineskip]All tests were executed from an OS X 10.11.6
+iMac host on the IPAC internal network, with prearranged VPN-free access
+to the LSP instances at NCSA. ~Tests requiring a web browser were
+carried out using Firefox 70.0.1.
+
+
+\subsubsection{Test Cases in LVV-C85 Test Cycle}
+
+\paragraph{Test Case LVV-T807 - Verify synchronous TAP queries
  }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T807}{\textit{ LVV-T807 } }
 test case in Jira.
 
-    Verify that the API Aspect TAP endpoint supports synchronous queries as
+Verify that the API Aspect TAP endpoint supports synchronous queries as
 described by the IVOA TAP 1.1 specification. ~ ~
 
 
-    \textbf{ Preconditions}:\\
-    
-
-    Execution status: {\bf Not Executed }
-
-    Final comment:\\
+\textbf{ Preconditions}:\\
 
 
-    Detailed step results:
+Execution status: {\bf Pass }
 
-    \begin{longtable}{p{1cm}p{2cm}p{13cm}}
-    \hline
-    {Step} & \multicolumn{2}{c}{Description, Results and Status}\\ \hline
-      1 & Description &
+Final comment:\\Test executed against lsst-lsp-int. ~\\
+No problems were encountered.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Using a Web browser, navigate to the\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Using a Web browser, navigate to the\\
 ``/auth/tokens'' endpoint of the LSP instance under test.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      A credential-entry screen should be displayed, unless the test user is
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A credential-entry screen should be displayed, unless the test user is
 already logged in in another window or tab of the browser.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The general CILogon login screen appeared.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      2 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      If necessary, enter a valid set of credentials. ~They may be NCSA or
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+If necessary, enter a valid set of credentials. ~They may be NCSA or
 non-NCSA credentials.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The token-request UI is displayed.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The token-request UI is displayed.
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+NCSA credentials were used, with a Duo push. ~Successful; reached
+``Personal access tokens'' screen.
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Status: \textbf{ Pass } \\ \hline
 
-      & Status          & Not Executed \\ \hline
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Request a token for the ``read:tap'' capability.
 
-      3 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Request a token for the ``read:tap'' capability.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A screen confirming the creation of the token.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      A screen confirming the creation of the token.
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+``Generate new token'' selected. ~``read:tap'' selected.\\
+A token oauth2\_proxy-a77\ldots{}6b9b generated, expiring in 24 hours.
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Status: \textbf{ Pass } \\ \hline
 
-      & Status          & Not Executed \\ \hline
-
-      4 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Leave the resulting page's browser tab/window open for use in subsequent
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Leave the resulting page's browser tab/window open for use in subsequent
 test steps.\\[2\baselineskip]In many cases you may be asked in a
 subsequent step to use the ``copy token to clipboard'' UI element on
 this page in order to transfer your token to a prompt in another window.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+(n/a)
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      5 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      From a Unix prompt on a system with network access to the TAP service in
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+From a Unix prompt on a system with network access to the TAP service in
 the LSP instance under test, and a ``bash''-style shell, verify using
 the ``export'' and ``curl'' commands below that an attempt to access the
 TAP service with the token from the previous step is
@@ -372,434 +515,496 @@ command.\\[2\baselineskip]Ensure that the token is deleted from the test
 environment after the ``curl'' command is complete, and that the token
 is invalidated via the token-access web interface.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+export ACCESS\_TOKEN\\
+read -p token -s ACCESS\_TOKEN\\
+curl -w `HTTP status code:
+\%\{http\_code\}\textbackslash{}nContent-Type:
+\%\{content\_type\}\textbackslash{}nTotal time:
+\%\{time\_total\}\textbackslash{}nBytes received:
+\%\{size\_download\}\textbackslash{}nFinal URL:
+\%\{url\_effective\}\textbackslash{}n' -L --header ``Authorization:
+Bearer \$\{ACCESS\_TOKEN\}'' -o tap-tables.xml
+`https://lsst-lsp-int.ncsa.illinois.edu/api/tap/sync?LANG=ADQL\&REQUEST=doQuery\&QUERY=SELECT+*+FROM+TAP\_SCHEMA.tables'\\
+unset ACCESS\_TOKEN
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The ``curl'' command returned HTTP status code 200, in a total time
+1.081s, returning 8391 bytes with Content-Type
+``application/x-votable+xml''. ~The file tap-tables.xml was created and
+is attached to this execution.
 
-      & Status          & Not Executed \\ \hline
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      6 & Description &
+ & Status: \textbf{ Pass } \\ \hline
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Verify by inspection that the file resulting from the ``curl'' command
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify by inspection that the file resulting from the ``curl'' command
 above has the general form of a VOTable. ~(A separate test case will
 verify the VOTable format itself.)\\[2\baselineskip]Save this file as
 part of the test records using LSST standard procedures.~
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The tap-tables.xml file does appear to the eye to be a reasonably
+conformant VOTable 1.3 file with a TABLEDATA payload.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-    \end{longtable}
+\end{longtable}
 
-
-    \paragraph{Test Case LVV-T622 - Verify LSP only available to authenticated users
+\paragraph{Test Case LVV-T622 - Verify LSP only available to authenticated users
  }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T622}{\textit{ LVV-T622 } }
 test case in Jira.
 
-    Verify that the functions and services of all three aspects of the LSP
+Verify that the functions and services of all three aspects of the LSP
 are accessible only to authenticated users.
 
 
-    \textbf{ Preconditions}:\\
-    
-
-    Execution status: {\bf Not Executed }
-
-    Final comment:\\
+\textbf{ Preconditions}:\\
 
 
-    Detailed step results:
+Execution status: {\bf Pass w/ Deviation }
 
-    \begin{longtable}{p{1cm}p{2cm}p{13cm}}
-    \hline
-    {Step} & \multicolumn{2}{c}{Description, Results and Status}\\ \hline
-      1 & Description &
+Final comment:\\Test executed against lsst-lsp-int. ~\\
+Minor concerns with the UX for logout operations, and with the
+completeness of the result of logging out.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Attempt to navigate to the Portal Aspect of the LSP instance under test.
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Attempt to navigate to the Portal Aspect of the LSP instance under test.
 ~Verify that credentials are requested and that a Portal interface is
 not displayed.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+No direct access to Portal; credential request screen displayed.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      No direct access to Portal; credential request screen displayed.
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Confirmed; CILogon with an LSST facade was reached.\\
+"\href{https://lsst-lsp-int.ncsa.illinois.edu/}{LSST LSP Integration
+(Domain Ingress Client)} requests access to the following information.
+If you do not approve this request, do not proceed."
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Status: \textbf{ Pass } \\ \hline
 
-      & Status          & Not Executed \\ \hline
-
-      2 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Enter the (presumably invalid) credentials user=foo, password=xyzzy, and
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Enter the (presumably invalid) credentials user=foo, password=xyzzy, and
 verify that access to the Portal Aspect interface is not granted.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+user=foo, password=xyzzy
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      No access to Portal Aspect; credential request screen displayed again.
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+No access to Portal Aspect; credential request screen displayed again.
 ~Record any error message that is shown.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The message ``The username you entered cannot be identified.'' was
+displayed in a colored box on the CILogon login screen. ~This is worth
+further investigation, to see whether this allows external actors to
+deduce valid userids.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Issues found executing this step:  \\
+ & \begin{minipage}[t]{13cm}{\footnotesize
+\href{https://jira.lsstcorp.org/browse/DM-22338}{DM-22338}~~CILogon can be used to check whether an NCSA username is valid; is this
+OK?
 
-      3 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+ & Status: \textbf{ Pass } \\ \hline
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Enter a set of valid credentials, and verify that access to the Portal
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Enter a set of valid credentials, and verify that access to the Portal
 interface is granted.\\[2\baselineskip]This test does not involve any
 exploration of the Portal behavior at this point.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Credentials for the user executing the test.
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Access to some version of the Portal interface is granted. ~(The exact
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Access to some version of the Portal interface is granted. ~(The exact
 nature of that interface will be evolving in the course of LSST
 construction and system integration.)
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The ``TAP Searches'' screen of the Portal application appeared by
+default.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      4 & Description &
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Log out from the Portal.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Log out from the Portal.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      A logout or LSP landing page is displayed.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Status          & Not Executed \\ \hline
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A logout or LSP landing page is displayed.
 
-      5 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Attempt to navigate to the Notebook Aspect of the LSP instance under
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A screen with just a ``Sign in with OpenID Connect'' button (and a
+footer reading "Secured with
+\href{https://github.com/pusher/oauth2_proxy\#oauth2_proxy}{OAuth2
+Proxy} version v3.2.0-151-g151ec7b") appeared.\\[2\baselineskip]This is
+not entirely acceptable in the long run. ~The user should never lose
+sight of a screen that confirms that they are still in an LSST
+environment. ~It is also not clear to what authentication domain one
+would be signing in, or what screen one would reach if signing in were
+successful.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Issues found executing this step:  \\
+ & \begin{minipage}[t]{13cm}{\footnotesize
+\href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~``Logout'' buttons in Portal and Notebook Aspects: non-user-friendly
+result, and apparently incomplete logout
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+ & Status: \textbf{ Initial Pass } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Attempt to navigate to the Notebook Aspect of the LSP instance under
 test. ~Verify that credentials are requested and that no other Notebook
 Aspect functionality is exposed.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      No direct access to the Notebook Aspect; credential request screen
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+No direct access to the Notebook Aspect; credential request screen
 displayed.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Manual navigation back to the main instance landing page was required.
+~No link to do this was available from the screen displayed in Step 4.\\
+Once at the landing page, clicking on the ``Notebook Aspect'' link
+produced a fresh CILogon login screen.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      6 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Enter the (presumably invalid) credentials user=foo, password=xyzzy, and
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Enter the (presumably invalid) credentials user=foo, password=xyzzy, and
 verify that access to the Notebook Aspect interface is not granted.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+user=foo, password=xyzzy
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      No access to Notebook Aspect; credential request screen displayed again.
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+No access to Notebook Aspect; credential request screen displayed again.
 ~Record any error message that is shown.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+After pressing the ``Log On'' button on the initial CILogon screen, it
+became clear that I had not in fact been fully logged out. ~No
+username/password screen was displayed at all, and I ended up on the
+``Start My Server'' page of JupyterHub, with my userid displayed and a
+``Logout'' button. ~Clicking that ``Logout'' button was no more
+successful at actually logging me out than the Portal equivalent
+was.\\[2\baselineskip]Conditional pass because the security
+vulnerability here only seriously affects shared-browser situations.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass w/ Deviation } \\ \hline
 
-      7 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Enter a set of valid credentials, and verify that access to the Notebook
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Enter a set of valid credentials, and verify that access to the Notebook
 Aspect interface is granted.\\[2\baselineskip]This test does not involve
 any exploration of the Notebook Aspect behavior at this point.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Credentials for the user executing the test.
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      An initial page of the JupyterHub system is displayed. ~Note briefly
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An initial page of the JupyterHub system is displayed. ~Note briefly
 what is seen, but no further testing is required.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This step also could not be executed, as it proved impossible to get the
+system into a state in which credentials were requested.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass w/ Deviation } \\ \hline
 
-      8 & Description &
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Log out of the Notebook Aspect.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Log out of the Notebook Aspect.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Status          & Not Executed \\ \hline
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      9 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      From a Unix prompt on a system with network access to the TAP service in
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This had the same result as in Step 4.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Initial Pass } \\ \hline
+
+9 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+From a Unix prompt on a system with network access to the TAP service in
 the LSP instance under test, verify using the ``curl'' command below
 that an attempt to access the TAP service without credentials is
 rejected.~
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+(Step 9 appears to have been an incomplete duplicate of Step 10.
+~Skipped.)
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      10 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      From a Unix prompt on a system with network access to the TAP service in
+10 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+From a Unix prompt on a system with network access to the TAP service in
 the LSP instance under test, verify using the ``curl'' command below
 that an attempt to access the TAP service with invalid credentials is
 rejected.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu'' in
 the ``curl'' command with the appropriate root URL for the LSP instance
 under test.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+curl -w `HTTP status code:
+\%\{http\_code\}\textbackslash{}nContent-Type:
+\%\{content\_type\}\textbackslash{}nTotal time:
+\%\{time\_total\}\textbackslash{}nBytes received:
+\%\{size\_download\}\textbackslash{}nFinal URL:
+\%\{url\_effective\}\textbackslash{}n' -L
+`https://lsst-lsp-int.ncsa.illinois.edu/api/tap/sync?LANG=ADQL\&REQUEST=doQuery\&QUERY=SELECT+*+FROM+TAP\_SCHEMA.tables'
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+HTTP status code 401 (Authorization Required) was received. ~The HTML
+code attached as ``tap-noauth.html'' was returned.
 
-      & Status          & Not Executed \\ \hline
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      11 & Description &
+ & Status: \textbf{ Pass } \\ \hline
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Using a web browser, navigate to the token-access endpoint
+11 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Using a web browser, navigate to the token-access endpoint
 (/auth/tokens) of the LSP instance under test. ~Authenticate with valid
 LSST credentials. ~Obtain a token for the ``read:tap'' capability.
 ~Leave the resulting web page displayed. ~It is not necessary to expose
 the full token text.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A token is granted.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      A token is granted.
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Token ID oauth2\_proxy-c077\ldots{}00f8 was received, with a 24 hour
+lifetime.
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Status: \textbf{ Pass } \\ \hline
 
-      & Status          & Not Executed \\ \hline
-
-      12 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      From a Unix prompt on a system with network access to the TAP service in
+12 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+From a Unix prompt on a system with network access to the TAP service in
 the LSP instance under test, and a ``bash''-style shell, verify using
 the ``export'' and ``curl'' commands below that an attempt to access the
 TAP service with the token from the previous step is
@@ -812,43 +1017,55 @@ command.\\[2\baselineskip]Ensure that the token is deleted from the test
 environment after the ``curl'' command is complete, and that the token
 is invalidated via the token-access web interface.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+export ACCESS\_TOKEN\\
+read -p token -s ACCESS\_TOKEN\\
+curl -w `HTTP status code:
+\%\{http\_code\}\textbackslash{}nContent-Type:
+\%\{content\_type\}\textbackslash{}nTotal time:
+\%\{time\_total\}\textbackslash{}nBytes received:
+\%\{size\_download\}\textbackslash{}nFinal URL:
+\%\{url\_effective\}\textbackslash{}n' -L --header ``Authorization:
+Bearer \$\{ACCESS\_TOKEN\}'' -o tap-tables.xml
+`https://lsst-lsp-int.ncsa.illinois.edu/api/tap/sync?LANG=ADQL\&REQUEST=doQuery\&QUERY=SELECT+*+FROM+TAP\_SCHEMA.tables'\\
+unset ACCESS\_TOKEN
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The ``curl'' command should return HTTP status code 200 and a VOTable
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The ``curl'' command should return HTTP status code 200 and a VOTable
 containing a list of tables in the TAP service should be
 obtained.\\[2\baselineskip]Retain the VOTable file in the test records.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The test was successful.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-    \end{longtable}
+\end{longtable}
 
-
-    \paragraph{Test Case LVV-T1334 - LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
+\paragraph{Test Case LVV-T1334 - LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
 milestone
  }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1334}{\textit{ LVV-T1334 } }
 test case in Jira.
 
-    This test case verifies that the Portal Aspect of the Science Platform
+This test case verifies that the Portal Aspect of the Science Platform
 is accessible to authorized users through a login process, and that TAP
 searches can be performed from the Portal Aspect UI.\\[2\baselineskip]In
 so doing and in conjunction with the other LDM-503-10a test cases
@@ -871,188 +1088,232 @@ above requirements, but rather to demonstrate having reached a certain
 level of partial capability during construction.
 
 
-    \textbf{ Preconditions}:\\
-    
-
-    Execution status: {\bf Not Executed }
-
-    Final comment:\\
+\textbf{ Preconditions}:\\
 
 
-    Detailed step results:
+Execution status: {\bf Pass w/ Deviation }
 
-    \begin{longtable}{p{1cm}p{2cm}p{13cm}}
-    \hline
-    {Step} & \multicolumn{2}{c}{Description, Results and Status}\\ \hline
-      1 & Description &
+Final comment:\\Test executed in full against lsst-lsp-int.\\
+As preparation for the execution of LVV-T1436 and LVV-T1437, Steps 6 and
+9 were repeated several days later against lsst-lsp-stable in order to
+refresh the TAP-results URL needed for the subsequent tests.\\
+Minor deviations: certain WISE/NEOWISE single-epoch photometry tables,
+not needed for the test, were not visible in the TAP service; same
+concerns with logout behavior as for LVV-T622.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Navigate to the \url{https://lsst-lsp-stable.ncsa.illinois.edu/}
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Navigate to the \url{https://lsst-lsp-stable.ncsa.illinois.edu/}
 endpoint of the LSP at the LDF. ~From the displayed page, navigate to
 the Portal Aspect.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+n/a
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      A login screen should be displayed.
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A login screen should be displayed.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Test performed on
+https://lsst-lsp-int.ncsa.illinois.edu/\\[2\baselineskip]Login screen
+displayed as expected.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      2 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Log in to the Portal Aspect with NCSA credentials. ~Verify that a Portal
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Log in to the Portal Aspect with NCSA credentials. ~Verify that a Portal
 TAP search screen comes up. ~Note the user name displayed in the upper
 left of the Portal. ~Log out.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+(NCSA credentials for an authorized user)
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Following login, the Portal Aspect TAP search screen should be
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Following login, the Portal Aspect TAP search screen should be
 displayed, or a clearly visible UI element allowing one-click access to
 that screen. ~A user name corresponding to the credentials entered
 should be displayed.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+TAP search screen displayed upon login. ~Username ``Gregory
+Dubois-Felsmann'' displayed.\\[2\baselineskip]Logging out resulted in
+the ``Sign in with OpenID Connect'' button being displayed. ~See
+DM-22350 for an issue regarding that result.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Issues found executing this step:  \\
+ & \begin{minipage}[t]{13cm}{\footnotesize
+\href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~``Logout'' buttons in Portal and Notebook Aspects: non-user-friendly
+result, and apparently incomplete logout
 
-      3 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+ & Status: \textbf{ Pass } \\ \hline
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Log in to the Portal Aspect with alternate credentials that are
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Log in to the Portal Aspect with alternate credentials that are
 associated with the same identity. ~
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The Portal application should come up just as in the previous step; the
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The Portal application should come up just as in the previous step; the
 user name displayed in the upper left of the Portal should be the same
 as in the previous step.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Because of the logout issues in DM-22350, before carrying out this step
+I cleared my browser history to ensure no carryover of old
+credentials/tokens/authorization headers.\\[2\baselineskip]Logging in
+with Caltech credentials that had been associated with my NCSA account
+via identity.lsst.org, I reached the same Portal screen with ``Gregory
+Dubois-Felsmann'' displayed.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      4 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Navigate to the TAP search screen, if necessary, and ensure that the
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Navigate to the TAP search screen, if necessary, and ensure that the
 LSST TAP service associated with the chosen LSP instance is selected.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      A TAP search screen should either already be displayed after the
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A TAP search screen should either already be displayed after the
 previous step, or should be displayed after a one-click action from the
 Portal's initial page. ~On the TAP screen, a UI element allowing the
 choice of TAP service to user should be available, and an LSST TAP
 service associated with the LSP instance under test should be
 pre-selected as the default.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The lsst-lsp-int.ncsa.illinois.edu/api/tap service was, correctly,
+selected by default.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      5 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Verify that the same WISE and SDSS catalog tables that were explored in
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Verify that the same WISE and SDSS catalog tables that were explored in
 DMTR-52 are now visible in the TAP service.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The SDSS Stripe 82 2013 processing's deep detection and forced
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The SDSS Stripe 82 2013 processing's deep detection and forced
 photometry catalogs, and the WISE mission's principal catalog, forced
 photometry catalog, and single-epoch source catalog should be
 accessible.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The SDSS ``RunDeepSource'' (deep detection) and ``RunDeepForcedSource''
+(forced photometry) tables are available, under the
+``sdss\_stripe82\_01'' schema (along with a number of additional tables
+from the original deployment).\\[2\baselineskip]The WISE
+``allwise\_p3as\_psd'' (deep detection) and ``allwise\_p3as\_mep''
+(forced photometry) tables are available, under the ``wise\_00'' schema
+(along with a number of additional tables from the original deployment).
+The three single-epoch source photometry tables do not seem to be
+visible.\\[2\baselineskip]While this is not formally a deviation from
+the test plan as written, these tables are all missing explanatory text
+in the TAP\_SCHEMA metadata used by the Portal TAP interface, so there
+is no user-friendly way to determine the meaning of the tables available
+to query.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Issues found executing this step:  \\
+ & \begin{minipage}[t]{13cm}{\footnotesize
+\href{https://jira.lsstcorp.org/browse/DM-22421}{DM-22421}~~Investigate why the WISE single-epoch photometry tables are not visible
+in the lsst-lsp-int TAP service
 
-      6 & Description &
+\href{https://jira.lsstcorp.org/browse/DM-22422}{DM-22422}~~Provide metadata for the SDSS and WISE schema and table data in
+TAP\_SCHEMA
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Perform a TAP search on the AllWISE source catalog around the equatorial
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+ & Status: \textbf{ Pass w/ Deviation } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Perform a TAP search on the AllWISE source catalog around the equatorial
 coordinates (2, 0) (degrees), with a 30 arcminute radius, using the
 Portal UI to specify the query (select the ``Single Table'' radio
 button). ~\\
@@ -1062,174 +1323,192 @@ the table menu.\\
 When the query completes, note the total number of rows in the table, as
 displayed in the table header, and record it.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Equatorial coordinates: (2, 0), cone radius 30 arcmin
 
-      & Expected Result &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      This query should return about 12,000 rows of data. ~It should be
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+This query should return about 12,000 rows of data. ~It should be
 displayed in a table, as an overlay on a context image, and as a
 configurable 2D density plot.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A table of 12,717 rows was retrieved. ~The data were displayed as a
+table of 128 100-row pages (that default page size is configurable, and
+can be changed on the fly by the user). ~They were also displayed as an
+overlay on a 2MASS color HiPS image, and as an x-y density plot, with
+the axes (ra,decl) selected by default, but easily changed in the
+UI.\\[2\baselineskip]The test runner issued the query requesting the
+following columns (which should have been called out in the test
+specification): ra, decl, cntr, source\_id, coadd\_id, w1mpro, w2mpro,
+w3mpro, w4mpro.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      7 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Using the table viewer UI, save the result of this search as a text file
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Using the table viewer UI, save the result of this search as a text file
 in CSV format. ~Use a line-counting tool to find the number of rows in
 the result, record it, and compare it with the reported number from the
 previous step. ~Ensure that the CSV file's name is
 ``LVV-T1334-output.csv'' and save it to the designated repository for
 test outputs.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Allowing for the CSV header row, the number of ~rows in the file should
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Allowing for the CSV header row, the number of ~rows in the file should
 match the number of rows in the table header in the UI.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\% wc LVV-T1334-output.csv\\
+12718 12718 1567903 LVV-T1334-output.csv\\
+\% head -2 LVV-T1334-output.csv\\
+cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro\\
+15100001351031627,0015p000\_ac51,-0.07016340,1.54437160,0015p000\_ac51-031627,16.36700000,15.81700000,12.21100000,8.40600000\\[2\baselineskip]12,718
+rows in the file is the expectation from Step 6: 12,717 plus one header
+row.\\[2\baselineskip]The file was attached to the test execution record
+in Jira (LVV-E556).\\[2\baselineskip]The file was also saved in the
+\href{https://github.com/lsst-dm/dmtr-161}{lsst-dm/dmtr-161} repository
+as
+"\href{https://github.com/lsst-dm/dmtr-161/blob/LVV-T1334-e1/executions/LVV-T1334/LVV-T1334-output.csv}{executions/LVV-T1334/LVV-T1334-output.csv}``.
+Tag ''LVV-T1334-e1" was applied.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      8 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Return to the TAP search screen in the UI (this can be done with the
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Return to the TAP search screen in the UI (this can be done with the
 ``TAP Searches'' button near the top of the window), select the ``ADQL''
 radio button, and view and record the ADQL text displayed for the query
 performed. ~Select ``Cancel'' to dismiss the search screen.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The query should appear to have the expected form for an ADQL cone
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The query should appear to have the expected form for an ADQL cone
 search, using the CONTAINS() and CIRCLE() functions.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The button is labeled ``LSST TAP'', not ``TAP
+Searches''.\\[2\baselineskip]The ADQL text is:\\
+SELECT cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro
+FROM wise\_00.allwise\_p3as\_psd WHERE CONTAINS(POINT('ICRS', ra,
+decl),CIRCLE('ICRS', 2, 0, 0.5))=1
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      9 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Select the ``i''-in-a-circle button in the table header. ~In the
+9 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Select the ``i''-in-a-circle button in the table header. ~In the
 resulting dialog box, click on the copy-to-clipboard icon for the TAP
 job URL for the query and paste the URL into the test record.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+https://lsst-lsp-int.ncsa.illinois.edu/api/tap/async/eatzseuepds92ous
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      10 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      In a separate browser window, access the page available at the URL
+10 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+In a separate browser window, access the page available at the URL
 obtained from the previous step. ~Observe and record the ADQL text for
 the query, in the `\textless{}uws:parameter id=``query''\textgreater{}'
 XML element. ~Verify that it matches the ADQL text obtained from the UI
 in a previous step.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The ADQL code matches that from Step 8.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The ADQL code matches that from Step 8.
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Pass:\\
+\textless{}uws:parameter id=``QUERY''\textgreater{}\\
+SELECT cntr,coadd\_id,decl,ra,source\_id,w1mpro,w2mpro,w3mpro,w4mpro
+FROM wise\_00.allwise\_p3as\_psd WHERE CONTAINS(POINT('ICRS', ra,
+decl),CIRCLE('ICRS', 2, 0, 0.5))=1\\
+\textless{}/uws:parameter\textgreater{}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Status: \textbf{ Pass } \\ \hline
 
-      & Status          & Not Executed \\ \hline
+\end{longtable}
 
-    \end{longtable}
-
-
-    \paragraph{Test Case LVV-T1436 - LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
+\paragraph{Test Case LVV-T1436 - LDM-503-10a: Notebook Aspect tests for LSP with Authentication and TAP
 milestone
  }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1436}{\textit{ LVV-T1436 } }
 test case in Jira.
 
-    This test case verifies that the Notebook Aspect of the Science Platform
+This test case verifies that the Notebook Aspect of the Science Platform
 is accessible to authorized users through a login process, and that TAP
 searches can be performed from Python code in the Notebook
 Aspect.\\[2\baselineskip]In so doing and in conjunction with the other
@@ -1251,25 +1530,28 @@ above requirements, but rather to demonstrate having reached a certain
 level of partial capability during construction.
 
 
-    \textbf{ Preconditions}:\\
-    Test case LVV-T1334 must have already been executed and the prescribed
+\textbf{ Preconditions}:\\
+Test case LVV-T1334 must have already been executed and the prescribed
 outputs saved, notably including the ``LVV-T1334-output.csv'' file.
 
 
-    Execution status: {\bf Not Executed }
+Execution status: {\bf Pass w/ Deviation }
 
-    Final comment:\\
+Final comment:\\Test executed against lsst-lsp-stable.\\
+No concerns except the same minor issues with logout behavior reported
+for LVV-T622.
 
 
-    Detailed step results:
 
-    \begin{longtable}{p{1cm}p{2cm}p{13cm}}
-    \hline
-    {Step} & \multicolumn{2}{c}{Description, Results and Status}\\ \hline
-      1 & Description &
+Detailed steps results:
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      If~\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+If~\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334
 (1.0)} has just been carried out, the tester will already be logged in
 to the Portal Aspect; skip to the next step.\\[2\baselineskip]Otherwise,
 use a Web browser to navigate to the landing page of the LSP instance
@@ -1277,555 +1559,560 @@ under test, and click through to the Portal Aspect link. ~This should
 trigger a login process; the tester should log in. ~Non-NCSA credentials
 should be used (or have been used) to log in to the Portal Aspect.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The web browser should display a Portal Aspect page with the user's name
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The web browser should display a Portal Aspect page with the user's name
 noted in the upper right hand corner.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Carried out on \{\{lsst-lsp-stable\}\}.\\[2\baselineskip]Caltech
+credentials used; ``Gregory Dubois-Felsmann''
+displayed.\\[2\baselineskip]NB: to enable further testing, the UI-driven
+Portal TAP search from LVV-T1334 Step 6 was repeated in this session in
+order to refresh the TAP results URL needed below.\\
+It is now
+https://lsst-lsp-stable.ncsa.illinois.edu/api/tap/async/gbupxri6cznn4jt7
+- replacing the one recorded in LVV-T1334's execution.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      2 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Use the same Web browser (in a new page or tab) to navigate to the
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Use the same Web browser (in a new page or tab) to navigate to the
 landing page of the LSP instance under test, and click through to the
 Notebook Aspect link. ~
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      No login credentials should be requested. ~A page allowing the creation
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+No login credentials should be requested. ~A page allowing the creation
 of a Notebook Aspect session should be visible.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+No credentials were requested. ~``gpdf'' was displayed as the user ID in
+the upper right.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      3 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Use the Notebook Aspect UI to create a ``small'' session using the most
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Use the Notebook Aspect UI to create a ``small'' session using the most
 recent ``recommended'' (weekly) release image.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The main JupyterLab UI should appear.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The main JupyterLab UI should appear.
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The Weekly 2019\_48 release was used. ~Successful session startup.
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Status: \textbf{ Pass } \\ \hline
 
-      & Status          & Not Executed \\ \hline
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Close any Portal Aspect window/tab(s) that are open.
 
-      4 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Close any Portal Aspect window/tab(s) that are open.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      5 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Use the JupyterLab Terminal application to create a small file in the
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Use the JupyterLab Terminal application to create a small file in the
 user's home directory.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\emph{To be executed in the Terminal at the shell prompt, e.g.:}\\
+touch \textasciitilde{}/test-20190915.txt\\
+\emph{(Use the current date.)}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The test file should be visible in the JupyterLab file browser.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+touch \textasciitilde{}/20191209.txt was created.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Log out of the Notebook Aspect. ~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The test file should be visible in the JupyterLab file browser.
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The ``Sign in with OpenID Connect'' screen was displayed. ~(As noted
+elsewhere this is not ultimately a user-friendly place for a logout to
+end up.)
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Status: \textbf{ Pass } \\ \hline
 
-      & Status          & Not Executed \\ \hline
-
-      6 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Log out of the Notebook Aspect. ~
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      7 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Navigate to the landing page for the LSP instance under test. ~Navigate
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Navigate to the landing page for the LSP instance under test. ~Navigate
 to the Portal Aspect from that page. ~(Do not log in if a login is
 requested.)
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      A login should be requested when the Portal Aspect is accessed. ~(This
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A login should be requested when the Portal Aspect is accessed. ~(This
 verifies that \emph{logout} is cross-Aspect.)
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The browser displayed a version of the Portal Aspect screen at first,
+with its Firefly components greyed out. ~It required an explicit refresh
+before the CILogon screen was displayed. Most likely some improvement to
+cache invalidation will be needed.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Issues found executing this step:  \\
+ & \begin{minipage}[t]{13cm}{\footnotesize
+\href{https://jira.lsstcorp.org/browse/DM-22350}{DM-22350}~~``Logout'' buttons in Portal and Notebook Aspects: non-user-friendly
+result, and apparently incomplete logout
 
-      8 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+ & Status: \textbf{ Pass w/ Deviation } \\ \hline
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Close the login window and quit the web browser in use.
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Close the login window and quit the web browser in use.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Status          & Not Executed \\ \hline
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      9 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Launch a web browser and navigate to the landing page for the LSP
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+9 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Launch a web browser and navigate to the landing page for the LSP
 instance under test. ~Navigate to the Notebook Aspect. ~When prompted
 for a login, use NCSA credentials (for the same user as the non-NCSA
 credentials used above). ~Request a session of the ``medium'' category
 with the most recent ``recommended'' (weekly) release image.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The usual JupyterLab UI should be displayed.
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The usual JupyterLab UI should be displayed.
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Upon logging in the previous JupyterLab server session was available.
+~It was not necessary to create a new one. ~(I.e., simply logging out,
+as instructed above, evidently does not stop the actual JL server
+process.)
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
+ & Status: \textbf{ Pass } \\ \hline
 
-      & Status          & Not Executed \\ \hline
-
-      10 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Examine the JupyterLab file browser for the file created in \textbf{Step
+10 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Examine the JupyterLab file browser for the file created in \textbf{Step
 5} above. ~If convenient (e.g., based on other distinctive files or
 persistent settings), verify further that the same user environment has
 been reached as with the non-NCSA credentials above.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      The same file should be visible. ~(This verifies that the two sets of
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The same file should be visible. ~(This verifies that the two sets of
 credentials lead to the same Notebook Aspect user environment.)
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The \textasciitilde{}/20191209.txt file was visible as expected, and
+other aspects of the session clearly showed that it was the same as the
+one reached via Caltech credentials.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      11 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Clone the test notebook for LDM-503-10a, ``LDM-503-10a-test.ipynb'',
+11 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Clone the test notebook for LDM-503-10a, ``LDM-503-10a-test.ipynb'',
 into the user environment from the TBD tag of the TBD Github repository.
 ~Record the SHA that applies to the version of the test notebook that
 has been cloned.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The details of this bookkeeping were worked out after the substance of
+the test case and test plan were approved.\\[2\baselineskip]The
+appropriate instructions would have been:
+
+\begin{enumerate}
+\tightlist
+\item
+  Clone the ``LVV-C85-unexecuted'' tag of the
+  \href{https://github.com/lsst-dm/dmtr-161}{lsst-dm/dmtr-161}
+  repository into the Notebook Aspect user environment.
+\item
+  Copy the ``notebooks/LDM-503-10a-test.ipynb'' notebook to a new
+  subdirectory of the repository clone, ``executions/LVV-T1436''.
+\item
+  Record the SHA-1 corresponding to the above tag.
+\end{enumerate}
+
+The SHA-1 for``LVV-C85-unexecuted'' is
+\href{https://github.com/lsst-dm/dmtr-161/commit/6b560e563b3194af76ebdc3b1b95704fccf16b4c}{6b560e5}.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+12 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Copy the file ``LVV-T1334-output.csv'' that was saved in the output
+repository for the LVV-T1334 test case into the home directory of the
+notebook session.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Status          & Not Executed \\ \hline
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      12 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Open the test notebook and insert the URL saved from the execution of
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+13 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Open the test notebook and insert the URL saved from the execution of
 LVV-T1334, Step 9 into the input cell that reads\\
 ``portal\_job\_url = ''''.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The URL from Step 1 above was used instead:
+https://lsst-lsp-stable.ncsa.illinois.edu/api/tap/async/gbupxri6cznn4jt7
+, as the one from LVV-T1334 had expired due to the length of time
+elapsed since that test was performed.\\[2\baselineskip]Note that the
+copy of the test notebook in the``executions/LVV-T1436'' directory was
+used for the test.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+14 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute the entire notebook.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Status          & Not Executed \\ \hline
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      13 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Record the success and/or failure indications that appear in the final
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+15 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Record the success and/or failure indications that appear in the final
 output cell of the notebook.\\
 If the notebook execution produced an exception, record that.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The final output of the notebook
+was:\\[2\baselineskip]\textbf{Successfully completed query from
+notebook: True\\
+Successful comparison to Portal query output: True\\
+Successful comparison to TAP job from Portal query: True}
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      14 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Save and close the test notebook. ~Save the fully-executed notebook in
+16 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Save and close the test notebook. ~Save the fully-executed notebook in
 TBD location as a record of the test.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The fully executed notebook was saved in
+the~~\href{https://github.com/lsst-dm/dmtr-161}{lsst-dm/dmtr-161}
+repository as ``executions/LVV-T1436/LDM-503-10a-test.ipynb''. Tag
+``LVV-T1436-e1'' was applied.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      15 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Without logging out, open a new browser window or tab, and navigate to
+17 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Without logging out, open a new browser window or tab, and navigate to
 the Portal Aspect of the LSP instance under test. ~Verify that the
 Portal Aspect can be accessed without a further login. ~Verify that the
 username displayed at the upper right is the same one as in \textbf{Step
 1} above.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The Portal Aspect TAP search screen opened immediately from the link
+from the lsst-lsp-stable landing page. ~User ``Gregory Dubois-Felsmann''
+was displayed as expected.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      16 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Log out of the Notebook Aspect, close the Portal Aspect windows, and
+18 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Log out of the Notebook Aspect, close the Portal Aspect windows, and
 quit the Web browser in use.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      17 & Description &
+\end{longtable}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Copy the file ``LVV-T1334-output.csv'' that was saved in the output
-repository for the LVV-T1334 test case into the home directory of the
-notebook session.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      18 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Execute the entire notebook.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-    \end{longtable}
-
-
-    \paragraph{Test Case LVV-T1437 - LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
+\paragraph{Test Case LVV-T1437 - LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone
  }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1437}{\textit{ LVV-T1437 } }
 test case in Jira.
 
-    This test case verifies that the TAP service in the API Aspect of the
+This test case verifies that the TAP service in the API Aspect of the
 Science Platform is accessible to authorized users through a login
 process, and that TAP searches can be performed using the IVOA TAP
 protocol from remote sites.\\[2\baselineskip]In so doing and in
@@ -1848,326 +2135,345 @@ above requirements, but rather to demonstrate having reached a certain
 level of partial capability during construction.
 
 
-    \textbf{ Preconditions}:\\
-    Test case LVV-T1334 must have already been executed and the prescribed
+\textbf{ Preconditions}:\\
+Test case LVV-T1334 must have already been executed and the prescribed
 outputs saved, notably including the ``LVV-T1334-output.csv'' file.
 
 
-    Execution status: {\bf Not Executed }
+Execution status: {\bf Pass w/ Deviation }
 
-    Final comment:\\
+Final comment:\\Test executed against lsst-lsp-stable.\\
+Minor concern: lack of usability of the latest version of the LSST
+``convenience API'' for TAP service access from offsite; fixed by
+reverting to an earlier version.
 
 
-    Detailed step results:
 
-    \begin{longtable}{p{1cm}p{2cm}p{13cm}}
-    \hline
-    {Step} & \multicolumn{2}{c}{Description, Results and Status}\\ \hline
-      1 & Description &
+Detailed steps results:
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      On the local computer, clone the test notebook for LDM-503-10a,
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+On the local computer, clone the test notebook for LDM-503-10a,
 ``LDM-503-10a-test.ipynb'', into the user environment from the TBD tag
 of the TBD Github repository. ~Note the SHA that applies to the version
 of the test notebook that has been cloned.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The details of this bookkeeping were worked out after the substance of
+the test case and test plan were approved.\\[2\baselineskip]The
+appropriate instructions would have been:
 
+\begin{enumerate}
+\tightlist
+\item
+  Clone the ``LVV-C85-unexecuted'' tag of the
+  \href{https://github.com/lsst-dm/dmtr-161}{lsst-dm/dmtr-161}
+  repository into the Notebook Aspect user environment.
+\item
+  Copy the ``notebooks/LDM-503-10a-test.ipynb'' notebook to a new
+  subdirectory of the repository clone, ``executions/LVV-T1437''.
+\item
+  Record the SHA-1 corresponding to the above tag.
+\end{enumerate}
 
-      & Status          & Not Executed \\ \hline
+The SHA-1 for``LVV-C85-unexecuted'' is
+\href{https://github.com/lsst-dm/dmtr-161/commit/6b560e563b3194af76ebdc3b1b95704fccf16b4c}{6b560e5}.
 
-      2 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Launch a LOCAL instance of JupyterLab (i.e., by running ``jupyter lab'')
-on the computer to be used for testing. ~Ensure that the test notebook
-is visible from within JupyterLab. ~\textbf{NB: as a reminder, this test
-case must NOT be run in the Notebook Aspect.}
+ & Status: \textbf{ Pass } \\ \hline
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+On the local computer, execute the command ``pip install pyvo
+jupyterlabutils'' in the local environment. ~(It is suggested to do this
+in a venv or conda environment.)
 
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Status          & Not Executed \\ \hline
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      3 & Description &
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Obtain an access token for the TAP service from the LSP instance under
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+It proved necessary to back up to jupyterlabutils 0.5.0 (the current
+version being 0.5.3) in order to avoid a token-validation failure below
+in Step 8. ~Note that the requirement for the offsite usability of the
+TAP-query-access convenience functions in this package has not been
+formally established.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Issues found executing this step:  \\
+ & \begin{minipage}[t]{13cm}{\footnotesize
+\href{https://jira.lsstcorp.org/browse/DM-22538}{DM-22538}~~jupyterlabutils 0.5.3 (current) does not work with the short tokens from
+the LSP get-token service
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+ & Status: \textbf{ Pass w/ Deviation } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Copy the file ``LVV-T1334-output.csv'' that was saved in the output
+repository for the LVV-T1334 test case into the home directory of the
+JupyterLab session.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Obtain an access token for the TAP service from the LSP instance under
 test, by navigating to the
 https://lsst-lsp-stable.ncsa.illinois.edu/auth/tokens endpoint in a web
 browser and logging in. ~NCSA credentials for the tester should be
 used.\\
 Copy the access token to the clipboard.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The token oauth2\_proxy-3ce\ldots{}5a7 was generated.
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      4 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Within the Posix shell session from which JupyterLab is to be launched,
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Within the Posix shell session from which JupyterLab is to be launched,
 set the environment variable ``ACCESS\_TOKEN'' to the value of the token
 obtained in the previous step. To do this without exposing the token
 unnecessarily, it is suggested to use the ``read -s'' command, pasting
 the token in at the no-echo prompt this command produces.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Example Code \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+export ACCESS\_TOKEN\\
+read -s ACCESS\_TOKEN
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Launch a LOCAL instance of JupyterLab (i.e., by running ``jupyter lab'')
+on the computer to be used for testing. ~Ensure that the test notebook
+is visible from within JupyterLab. ~\textbf{NB: as a reminder, this test
+case must NOT be run in the Notebook Aspect.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & Status          & Not Executed \\ \hline
+ & Status: \textbf{ Pass } \\ \hline
 
-      5 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Execute the entire notebook.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      6 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Record the success and/or failure indications that appear in the final
-output cell of the notebook.\\
-If the notebook execution produced an exception, record that.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      7 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Save and close the test notebook. ~Save the fully-executed notebook in
-TBD location as a record of the test.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      8 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Copy the file ``LVV-T1334-output.csv'' that was saved in the output
-repository for the LVV-T1334 test case into the home directory of the
-JupyterLab session.
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      9 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      On the local computer, execute the command ``pip install pyvo
-jupyterlabutils'' in the local environment. ~(It is suggested to do this
-in a venv or conda environment.)
-
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Expected Result &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
-
-
-      & Status          & Not Executed \\ \hline
-
-      10 & Description &
-
-      \begin{minipage}[t]{13cm}{\footnotesize
-      Open the test notebook and insert the URL saved from the execution of
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Open the test notebook and insert the URL saved from the execution of
 LVV-T1334, Step 9 into the input cell that reads\\
 ``portal\_job\_url = ''''.
 
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Expected Result &
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
-      & \begin{minipage}[t]{2cm}{Actual\\ Result}\end{minipage}   & 
-      \begin{minipage}[t]{13cm}{\footnotesize
-      
-      \vspace{\dp0}
-      } \end{minipage} \\
-      \\ \cdashline{2-3}
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+https://lsst-lsp-stable.ncsa.illinois.edu/api/tap/async/gbupxri6cznn4jt7
+was inserted. ~(This was the URL generated at the start of LVV-T1436 to
+replace the one from LVV-T1334 which had expired.)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Execute the entire notebook.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
 
 
-      & Status          & Not Executed \\ \hline
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
 
-    \end{longtable}
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The notebook runs to completion successfully.\\
+(Note: It is at this stage that the ``token-validation failure''
+mentioned in Step 2 above appears if a too-recent version of the
+``jupyterlabutils'' package is installed.)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+9 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Record the success and/or failure indications that appear in the final
+output cell of the notebook.\\
+If the notebook execution produced an exception, record that.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The final output of the notebook
+was:\\[2\baselineskip]\textbf{Successfully completed query from
+notebook: True\\
+Successful comparison to Portal query output: True\\
+Successful comparison to TAP job from Portal query: True}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+10 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Save and close the test notebook. ~Save the fully-executed notebook in
+TBD location as a record of the test.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The fully executed notebook was saved in the
+\href{https://github.com/lsst-dm/dmtr-161}{lsst-dm/dmtr-161} repository
+as ``executions/LVV-T1437/LDM-503-10a-test.ipynb''. Tag ``LVV-T1437-e1''
+was applied.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Pass } \\ \hline
+
+\end{longtable}
 
 
 \input{appendix.tex}
